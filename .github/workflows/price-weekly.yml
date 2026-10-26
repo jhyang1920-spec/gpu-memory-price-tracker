@@ -4,7 +4,7 @@ name: GPU memory prices weekly
 
 on:
   schedule:
-    - cron: "0 20 * * *"   # 매일 20:00 UTC (한국 5:00)
+    - cron: "30 19 * * *"   # 매일 19:30 UTC (한국 4:30)
   workflow_dispatch:       # 수동 실행 버튼
     inputs:
       dump_text:
