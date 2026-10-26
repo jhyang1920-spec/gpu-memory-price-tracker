@@ -1,0 +1,699 @@
+Run GLM-5.3 on Runpod today
+
+Skip to main content
+Product
+Pods
+On-demand GPUs, deployed across 31 global regions.
+Serverless
+Run API-based AI workloads with serverless GPU endpoints.
+Clusters
+Run multi-node GPU clusters for distributed AI workloads.
+Hub
+Deploy open-source AI models and templates on Runpod.
+Deployments Models
+Manage your or our compute from one unified control plane
+Use Cases
+Inference
+Serve models in real-time with low-latency GPUs.
+Agents
+Deploy AI agents that run, react, and scale instantly.
+Fine-Tuning
+Train models faster with efficient, scalable compute.
+Compute-Heavy Tasks
+Process massive workloads with zero bottlenecks.
+Resources
+Case Studies
+Loved by leaders. But don’t just take it from us.
+Articles
+In-depth perspectives, ideas, and updates from our team.
+Reports
+Data on AI compute, GPU usage, and infrastructure trends.
+Press
+Company news and media coverage.
+Blog
+Our team’s insights on building better and scaling smarter.
+Company
+About
+Redefining cloud compute with speed, scale, and innovation.
+Partner
+Bring enterprise-grade GPU infrastructure to your customers.
+Careers
+Join our mission to build the launchpad for AI apps.
+Docs
+Pricing
+Enterprise
+Search
+Contact Sales
+Sign in
+Get Started
+
+GPU PRICING
+
+GPU Cloud Pricing
+Updated October 8, 2026
+
+Runpod pricing depends on the GPU workload you run: Pods for dedicated GPU instances, Serverless for API inference, and Clusters for multi-node jobs.
+‍
+
+Get Started
+
+
+For reserved capacity and contract pricing,
+speak to our enterprise sales team.
+‍
+
+Talk to Sales
+Pods
+
+Thousands of GPUs across 30+ regions. Simple pricing plans for teams of all sizes, designed to scale with you.
+
+Get started
+
+GPU
+
+Community Cloud
+Secure Cloud
+Per hour
+Per second
+>80GB VRAM
+
+B300
+
+288 GB HBM3e
+251 GB RAM
+32
+vCPUs
+$8.99/hr
+Deploy
+B300
+
+H200
+
+141 GB VRAM
+276 GB RAM
+24
+vCPUs
+$5.29/hr
+Deploy
+H200
+
+B200
+
+180 GB VRAM
+283 GB RAM
+28
+vCPUs
+$7.99/hr
+Deploy
+B200
+
+RTX Pro 6000
+
+96 GB VRAM
+188 GB RAM
+16
+vCPUs
+$2.49/hr
+Deploy
+RTX Pro 6000
+
+H100 NVL
+
+94 GB VRAM
+94 GB RAM
+16
+vCPUs
+$3.19/hr
+Deploy
+H100 NVL
+80GB VRAM
+
+H100 PCIe
+
+80 GB VRAM
+188 GB RAM
+16
+vCPUs
+$2.89/hr
+Deploy
+H100 PCIe
+
+H100 SXM
+
+80 GB VRAM
+125 GB RAM
+20
+vCPUs
+$3.99/hr
+Deploy
+H100 SXM
+
+A100 PCIe
+
+80 GB VRAM
+117 GB RAM
+8
+vCPUs
+$1.79/hr
+Deploy
+A100 PCIe
+
+A100 SXM
+
+80 GB VRAM
+125 GB RAM
+16
+vCPUs
+$1.79/hr
+Deploy
+A100 SXM
+48GB VRAM
+
+Pro 6000 MIG 48GB
+
+48 GB VRAM
+62 GB RAM
+8
+vCPUs
+$1.29/hr
+Deploy
+Pro 6000 MIG 48GB
+
+L40S
+
+48 GB VRAM
+94 GB RAM
+16
+vCPUs
+$1.09/hr
+Deploy
+L40S
+
+RTX 6000 Ada
+
+48 GB VRAM
+167 GB RAM
+10
+vCPUs
+$0.99/hr
+Deploy
+RTX 6000 Ada
+
+A40
+
+48 GB VRAM
+50 GB RAM
+9
+vCPUs
+$0.59/hr
+Deploy
+A40
+
+L40
+
+48 GB VRAM
+94 GB RAM
+8
+vCPUs
+$0.82/hr
+Deploy
+L40
+
+RTX A6000
+
+48 GB VRAM
+50 GB RAM
+9
+vCPUs
+$0.59/hr
+Deploy
+RTX A6000
+32GB VRAM
+
+RTX 5090
+
+32 GB VRAM
+35 GB RAM
+9
+vCPUs
+$1.19/hr
+Deploy
+RTX 5090
+24GB VRAM
+
+Pro 6000 MIG 24GB
+
+24 GB VRAM
+31 GB RAM
+4
+vCPUs
+$0.69/hr
+Deploy
+Pro 6000 MIG 24GB
+
+L4
+
+24 GB VRAM
+50 GB RAM
+12
+vCPUs
+$0.59/hr
+Deploy
+L4
+
+RTX 3090
+
+24 GB VRAM
+125 GB RAM
+16
+vCPUs
+$0.50/hr
+Deploy
+RTX 3090
+
+RTX 4090
+
+24 GB VRAM
+41 GB RAM
+6
+vCPUs
+$0.89/hr
+Deploy
+RTX 4090
+
+RTX A5000
+
+24 GB VRAM
+25 GB RAM
+9
+vCPUs
+$0.27/hr
+Deploy
+RTX A5000
+Serverless
+
+Cost effective for every inference workload. Save 25% over other Serverless cloud providers on flex workers alone.
+
+Get started
+
+GPU
+
+Per hour
+Per second
+Workers
+280GB
+B300
+
+Maximum throughput for big models.
+
+$
+10.65
+/hr
+180GB
+B200
+
+Maximum throughput for big models.
+
+$
+8.64
+/hr
+141GB
+H200
+
+Extreme throughput for big models.
+
+$
+5.93
+/hr
+96GB
+RTX 6000 Pro
+PRO
+
+High throughput for large model inference workloads.
+
+$
+3.49
+/hr
+80GB
+H100
+PRO
+
+Extreme throughput for big models.
+
+$
+4.79
+/hr
+80GB
+A100
+
+High throughput GPU, yet still very cost-effective.
+
+$
+2.72
+/hr
+48GB
+L40, L40S, 6000 Ada, MIG 48GB
+PRO
+
+Extreme inference throughput on LLMs like Llama 3 7B.
+
+$
+1.75
+/hr
+48GB
+A6000, A40
+
+A cost-effective option for running big models.
+
+$
+1.22
+/hr
+32GB
+5090
+PRO
+
+Extreme throughput for small-to-medium models.
+
+$
+1.58
+/hr
+32GB
+RTX PRO 4500 Blackwell
+
+Cost-effective Blackwell inference for 32GB workloads.
+
+$
+1.15
+/hr
+24GB
+4090
+PRO
+
+Extreme throughput for small-to-medium models.
+
+$
+1.10
+/hr
+24GB
+L4, A5000, 3090, MIG 24GB
+
+Great for small-to-medium sized inference workloads.
+
+$
+0.69
+/hr
+16GB
+A4000, A4500, RTX 4000, RTX 2000
+
+The most cost-effective for small models.
+
+$
+0.58
+/hr
+Clusters
+
+Launch multi-GPU clusters in minutes with no commitments. Scale up to 64 GPUs, attach shared storage, and pay only for what you use.
+
+Get started
+
+GPU
+
+Per hour
+Per second
+H200 SXM
+$
+6.35
+/hr
+H200 SXM
+A100 SXM
+$
+2.15
+/hr
+A100 SXM
+L40S
+Contact sales
+L40S
+H100 SXM
+Contact sales
+H100 SXM
+B200
+Contact sales
+B200
+Reserved Clusters
+
+Dedicated GPU clusters with guaranteed availability, custom configurations, SLA-backed uptime, and discounted rates for enterprises scaling to 10,000+ GPUs.
+
+Talk to an engineer
+
+GPU
+
+1mo
+3mo
+6mo
+12mo
+12mo+
+H200 SXM
+Contact sales
+H200 SXM
+A100 SXM
+Contact sales
+A100 SXM
+L40S
+Contact sales
+L40S
+H100 SXM
+Contact sales
+H100 SXM
+B200
+Contact sales
+B200
+Storage
+
+Flexible and persistent storage options starting at $0.05/GB/mo with standard and high-performance tiers.
+
+Get started
+
+Storage Type
+
+Container Disk
+$0.10/GB/mo
+Volume Disk
+Running - $0.10/GB/mo
+Idle - $0.20/GB/mo
+Volume Disk
+Network Storage (Standard)
+Under 1TB - $0.07/GB/mo
+Over 1TB - $0.05/GB/mo
+Network Storage (Standard)
+Network Storage (High-Performance)
+$0.14/GB/mo
+Network Storage (High-Performance)
+Public Endpoints
+
+Instant access to pre-deployed AI models via API. No infrastructure setup required.
+
+Get started
+
+Model Name
+
+AUDIO
+Pruna / Whisper V3 Large
+$0.05 per 1000 characters
+Pruna / Whisper V3 Large
+resembleai / Chatterbox Turbo
+$0.00 per 1000 characters.
+resembleai / Chatterbox Turbo
+minimax / Minimax Speech 02 HD
+$0.05 per 1000 characters
+minimax / Minimax Speech 02 HD
+minimax / Minimax Speech 02 HD
+$0.05 per 1000 characters
+minimax / Minimax Speech 02 HD
+IMAGE
+bytedance / Seedream 4.0 Edit
+$0.0270 per request
+bytedance / Seedream 4.0 Edit
+bytedance / Seedream 4.0 T2I
+$0.0270 per request
+bytedance / Seedream 4.0 T2I
+google / Nano Banana Edit
+$0.0380 per request
+google / Nano Banana Edit
+google / Nano Banana Pro Edit
+$0.14 per request
+google / Nano Banana Pro Edit
+pruna / Pruna Image T2I
+$0.0050 per request
+pruna / Pruna Image T2I
+pruna / Pruna Image Edit
+$0.01 per request
+pruna / Pruna Image Edit
+alibaba / WAN 2.6 T2I
+$0.03 per request
+alibaba / WAN 2.6 T2I
+qwen / Qwen Image Edit 2511
+$0.02 per request
+qwen / Qwen Image Edit 2511
+qwen / Qwen Image Edit 2511 LoRA
+$0.025 per request
+qwen / Qwen Image Edit 2511 LoRA
+Tongyi-MAI / Z Image Turbo
+$0.0050 per request.
+Tongyi-MAI / Z Image Turbo
+black-forest-labs / FLUX.1 [dev]
+$0.02 per megapixel
+black-forest-labs / FLUX.1 [dev]
+black-forest-labs / FLUX.1 Kontext [dev]
+$0.0250 per request
+black-forest-labs / FLUX.1 Kontext [dev]
+black-forest-labs / FLUX.1 Schnell
+$0.0024 per megapixel
+black-forest-labs / FLUX.1 Schnell
+Bytedance / Seedream 3.0
+$0.0300 per request
+Bytedance / Seedream 3.0
+qwen / Qwen Image Edit
+$0.0200 per request
+qwen / Qwen Image Edit
+qwen / Qwen Image
+$0.0200 per request
+qwen / Qwen Image
+qwen / Qwen Image LoRA
+$0.0250 per request
+qwen / Qwen Image LoRA
+LANGUAGE
+deep-cogito / Deep Cogito v2 Llama 70B
+$0.00001 per 1m tokens
+deep-cogito / Deep Cogito v2 Llama 70B
+qwen / Qwen3 32B AWQ
+$10.00 per 1m tokens
+qwen / Qwen3 32B AWQ
+minimax / Minimax Speech 02 HD
+$0.05 per 1000 characters
+minimax / Minimax Speech 02 HD
+minimax / Minimax Speech 02 HD
+$0.05 per 1000 characters
+minimax / Minimax Speech 02 HD
+ibm / IBM Granite 4.0 H Small
+$1.00 per 1m tokens
+ibm / IBM Granite 4.0 H Small
+VIDEO
+Bytedance / Seedance 1.0 pro
+5s: $0.12(480p) per request
+Bytedance / Seedance 1.0 pro
+Alibaba / Wan 2.2 I2V 720p
+5s: $0.30 per request
+Alibaba / Wan 2.2 I2V 720p
+Alibaba / Wan 2.2 T2V 720p
+5s: $0.30 per request
+Alibaba / Wan 2.2 T2V 720p
+Alibaba / Wan 2.1 I2V 720p
+$0.30 per request
+Alibaba / Wan 2.1 I2V 720p
+Alibaba / Wan 2.1 T2V 720p
+$0.30 per request
+Alibaba / Wan 2.1 T2V 720p
+kwaivgi / Kling v2.6 Standard Motion Control
+1-3s $0.21 per request
+kwaivgi / Kling v2.6 Standard Motion Control
+Alibaba / WAN 2.6 T2V
+5s: $0.50 per request
+Alibaba / WAN 2.6 T2V
+bytedance / Seedance V1.5 Pro I2V
+$0.024 per second
+bytedance / Seedance V1.5 Pro I2V
+kwaivgi / Kling Video O1 R2V
+$0.112 per second
+kwaivgi / Kling Video O1 R2V
+Alibaba / Wan 2.6 I2V
+5s: $0.50 per request
+Alibaba / Wan 2.6 I2V
+OpenAI / SORA 2 Pro I2V
+4s $1.20 pre request
+OpenAI / SORA 2 Pro I2V
+MeiGen-AI / InfiniteTalk
+$0.25 · 720p per request
+MeiGen-AI / InfiniteTalk
+OpenAI / SORA 2 I2V
+4s: $0.40 per request
+OpenAI / SORA 2 I2V
+Alibaba / Wan 2.5 I2V
+5s $0.25 pe request
+Alibaba / Wan 2.5 I2V
+kwaivgi / Kling v2.1 I2V Pro
+5s: $0.45 per request
+kwaivgi / Kling v2.1 I2V Pro
+Alibaba / Wan 2.2 I2V 720p LoRA
+5s: $0.35 per request
+Alibaba / Wan 2.2 I2V 720p LoRA
+Gain additional savings with reservations.
+
+Save more with long-term commitments. Speak with our team to reserve discounted active and flex workers.
+
+Get started
+How Runpod pricing works
+
+Runpod pricing is based on the type of GPU workload you run. Pods are dedicated GPU instances for development and long-running jobs, Serverless bills inference workers based on usage, and Clusters support multi-node workloads and reserved capacity.
+
+Storage and deployment choices affect total cost, so teams should choose the model that matches workload duration, traffic pattern, and control needs.
+
+Contact enterprise sales
+Enterprise Contracts
+
+Need support for larger deployments or custom requirements? For reserved capacity and contract pricing, speak to our enterprise sales team.
+
+Talk to sales
+Build what’s next.
+
+Build, train, and scale AI workloads on Runpod with cloud GPUs, Serverless, and Clusters.
+
+Get started
+Request a demo
+
+329 Bryant St #4D
+San Francisco, CA 94107
+
+Product
+Cloud GPUs
+Serverless
+POPULAR
+Clusters
+Hub
+Use Cases
+Inference
+Fine-Tuning
+Agents
+Compute-Heavy Tasks
+Resources
+Blog
+Product updates
+Press
+GPU Benchmarks
+Models Directory
+Referral Program
+Brandkit
+Articles
+Pricing
+Case Studies
+Startup Program
+Docs
+Company
+About
+Partners
+Contact
+Call +1 (888) 478-6012
+Careers
+
+Subscribe for updates
+
+Runpod stores and processes your email to send you the content you requested. You can unsubscribe at any time. See the Runpod privacy policy for details.
+
+All systems operational
+
+Using an AI agent? Point it to agents.runpod.io
+© 2026 Runpod Inc.
+Terms of Service
+Privacy Policy
+Cookie Policy
+Cookie Settings
+Compliance

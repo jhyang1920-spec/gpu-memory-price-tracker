@@ -1,0 +1,19 @@
+{
+ "run_at": "2026-10-26T10:41:38+09:00",
+ "week": "2026-10-26",
+ "gpu_rows": 11,
+ "memory_rows": 4,
+ "missing": [
+  "GetDeploying H100",
+  "GetDeploying H200",
+  "GetDeploying B200",
+  "GetDeploying A100 80GB",
+  "Lambda H200",
+  "TrendForce DDR5 RDIMM 32GB 4800/5600",
+  "TrendForce GDDR5 8Gb",
+  "TrendForce DDR5 8GB SO-DIMM",
+  "TrendForce DDR4 16GB SO-DIMM",
+  "TrendForce 512Gb TLC"
+ ],
+ "page_errors": {}
+}

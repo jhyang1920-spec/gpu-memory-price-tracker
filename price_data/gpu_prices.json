@@ -2,62 +2,6 @@
 {
 "week": "2026-10-26",
 "gpu": "B200",
-"source": "GetDeploying",
-"kind": "market_median",
-"price": 8.09
-},
-{
-"week": "2026-10-26",
-"gpu": "B200",
-"source": "GetDeploying",
-"kind": "market_low",
-"price": 3.75
-},
-{
-"week": "2026-10-26",
-"gpu": "H200",
-"source": "GetDeploying",
-"kind": "market_median",
-"price": 4.88
-},
-{
-"week": "2026-10-26",
-"gpu": "H200",
-"source": "GetDeploying",
-"kind": "market_low",
-"price": 2.09
-},
-{
-"week": "2026-10-26",
-"gpu": "H100",
-"source": "GetDeploying",
-"kind": "market_median",
-"price": 3.63
-},
-{
-"week": "2026-10-26",
-"gpu": "H100",
-"source": "GetDeploying",
-"kind": "market_low",
-"price": 1.6
-},
-{
-"week": "2026-10-26",
-"gpu": "A100 80GB",
-"source": "GetDeploying",
-"kind": "market_median",
-"price": 1.87
-},
-{
-"week": "2026-10-26",
-"gpu": "A100 80GB",
-"source": "GetDeploying",
-"kind": "market_low",
-"price": 0.89
-},
-{
-"week": "2026-10-26",
-"gpu": "B200",
 "source": "Lambda",
 "kind": "list",
 "price": 6.69

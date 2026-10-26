@@ -1,0 +1,61 @@
+Research Report 
+Selected Topics
+Membership 
+Price Trends 
+Insights 
+Roadshow
+Discover 
+Sign In
+Price Trends
+Home  Price Trends
+DRAM Price Trends
+DRAM Spot Price
+DRAM Contract Price
+Module Spot Price
+GDDR Spot Price
+LPDDR Spot Price
+Mobile DRAM Contract Price
+DRAM Spot Price 
+Early notice was announced at 17:50. (20 minutes in advance)
+
+Last Update 2026-10-23 18:10 (GMT+8)
+
+Item	Daily High	Daily Low	Session High	Session Low	Session Average	Session Change	History
+DDR5 16Gb (2Gx8) 4800/5600	71.00	47.00	71.00	47.00	61.267	▲ 0.27 %	
+DDR5 16Gb (2Gx8) eTT	30.00	28.30	30.00	28.30	29.00	▲ 0.69 %	
+DDR4 16Gb (2Gx8) 3200	116.00	45.50	116.00	45.50	82.87	▼ -0.30 %	
+DDR4 16Gb (2Gx8) eTT	15.50	13.00	15.50	13.00	13.925	— 0.00 %	
+DDR4 8Gb (1Gx8) 3200	85.00	25.50	85.00	25.50	47.107	▲ 0.23 %	
+DDR4 8Gb (1Gx8) eTT	6.20	5.80	6.20	5.80	5.97	— 0.00 %	
+DDR3 4Gb 512Mx8 1600/1866	21.00	9.90	21.00	9.90	13.842	— 0.00 %	
+Related Reports
+DRAM Contract Price Sep. 2026
+
+Memory contract prices remained stable with expected growth momentum. On the supply side, major Korean and Taiwanese makers shifted capacity to server applications, causing severe PC DRAM shortages and tight secondary market supply. On the demand side, improved CPU availability and channel stocking boosted shipment performance, prompting PC OEMs to aggressively accumulate inventory and optimize costs.
+
+More
+DRAM Contract Price Aug. 2026
+
+Rising chipmaker quotes and modest shipment recovery drive PC DRAM contract price increases. Facing future supply contraction, OEMs aggressively build inventory while adopting component downgrades to manage costs. Meanwhile, spot prices remain firm, prompting vendors to initiate long-term agreements for market visibility.
+
+More
+
+Category
+
+DRAM (Index)
+NAND Flash
+TFT-LCD (Index)
+PV
+Li-Ion Battery
+About Us
+Research Report
+Tags
+Industry Insights
+Terms of Use
+Privacy Policy
+Membership Terms & Conditions
+Contact Us
+Subscribe to Industry Insights
+Subscribe
+English 
+© 2026 TrendForce Corp. All rights reserved

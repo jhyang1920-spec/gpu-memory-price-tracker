@@ -1,0 +1,60 @@
+Research Report 
+Selected Topics
+Membership 
+Price Trends 
+Insights 
+Roadshow
+Discover 
+Sign In
+Price Trends
+Home  Price Trends
+NAND Flash Price Trends
+NAND Flash Spot Price
+NAND Flash Contract Price
+Wafer Spot Price
+Memory Card Spot Price
+PC-Client OEM SSD Contract Price
+SSD Street Price
+NAND Flash Wafer Contract Price
+eMMC Spot Price
+eMMC/UFS Contract Price
+NAND Flash Spot Price 
+
+Last Update 2026-10-12 14:40 (GMT+8)
+
+Item	Daily High	Daily Low	Session High	Session Low	Session Average	Session Change	History
+SLC 2Gb 256MBx8	4.60	4.25	4.60	4.25	4.413	▲ 1.38 %	
+SLC 1Gb 128MBx8	3.60	2.95	3.60	2.95	3.363	▼ -0.15 %	
+MLC 64Gb 8GBx8	55.00	38.50	55.00	38.50	42.337	▲ 0.59 %	
+MLC 32Gb 4GBx8	21.50	19.20	21.50	19.20	19.833	▲ 0.84 %	
+Related Reports
+NAND Flash Contract Price Sep. 2026
+
+As original manufacturers shift production capacity to high-layer 3D processes, niche NAND Flash prices remain hovering at high levels. Influenced by buyers&#039; cost pressures and supply discrepancies, price growth for low-capacity SLC has slowed significantly, whereas high-capacity SLC maintains its momentum, backed by rigid demand in automotive and networking applications. Meanwhile, due to extremely scarce supply and a hard price ceiling, MLC has entered a flat consolidation phase overall.
+
+More
+NAND Flash Contract Price Aug. 2026
+
+Driven by constrained capacity, niche NAND Flash supply shortages persist. SLC maintains moderate gains supported by rigid demand, though growth has slowed. MLC prices remain nearly flat as buyer cost limits are reached, entering a consolidation phase. Going forward, SLC will rise moderately while MLC stabilizes.
+
+More
+
+Category
+
+DRAM (Index)
+NAND Flash
+TFT-LCD (Index)
+PV
+Li-Ion Battery
+About Us
+Research Report
+Tags
+Industry Insights
+Terms of Use
+Privacy Policy
+Membership Terms & Conditions
+Contact Us
+Subscribe to Industry Insights
+Subscribe
+English 
+© 2026 TrendForce Corp. All rights reserved

@@ -1,0 +1,563 @@
+CoreWeave Forge is here: connect your AI loop and compound every improvement. Read more
+
+CoreWeave Cloud
+Infrastructure
+CoreWeave Forge
+Solutions
+Resources
+Log in
+
+|
+
+Sign up
+Contact us
+CoreWeave Cloud Pricing
+
+Flexible, portfolio-wide pricing for AI compute, storage, networking, and more.
+
+On-demand GPU instances
+
+Utilize on-demand GPU instances for additional workloads when you’re not looking for long-term capacity commitments. Quickly spin-up burst On-Demand or Spot capacity—with the flexibility of great pricing.
+
+REGION: NORTH AMERICA
+GPU Model
+GPU Count
+VRAM (GB)
+vCPUs
+System RAM
+(GB)
+Local Storage
+(TB)
+On-Demand Price (Per Hour)
+Spot Price (Per Hour)
+Inference Single GPU Price(Per Hour)²
+NVIDIA GB300 NVL72
+41
+279
+144
+960
+61.44
+Contact sales
+N/A
+Contact sales
+NVIDIA GB200 NVL72
+41
+186
+144
+960
+30.72
+$42.00
+N/A
+$10.50
+NVIDIA HGX B300
+8
+270
+192
+4,096
+61.44
+Contact sales
+$35.84
+Contact sales
+NVIDIA HGX B200
+8
+180
+128
+2,048
+61.44
+$68.80
+$34.11
+$8.60
+NVIDIA RTX PRO 6000 Blackwell Server Edition (High Memory)
+8
+96
+128
+1,024
+7.68
+$20.00
+$11.09
+$2.50
+NVIDIA RTX PRO 6000 Blackwell Server Edition (Standard Memory)
+8
+96
+128
+512
+7.68
+Contact sales
+$9.56
+Contact sales
+NVIDIA GH200
+1
+96
+72
+480
+7.68
+$6.50
+N/A
+$6.50
+NVIDIA HGX H100
+8
+80
+128
+2,048
+61.44
+$49.24
+$19.71
+$6.16
+NVIDIA L40
+8
+48
+128
+1,024
+7.68
+$10.00
+$6.27
+$1.25
+NVIDIA HGX H200
+8
+141
+128
+2,048
+61.44
+$50.44
+$20.93
+$6.31
+NVIDIA L40S
+8
+48
+128
+1,024
+7.68
+$18.00
+$7.88
+$2.25
+NVIDIA A100
+8
+80
+128
+2,048
+7.68
+$21.60
+$9.65
+$2.70
+REGION: EUROPE
+GPU Model
+GPU Count
+VRAM (GB)
+vCPUs
+System RAM
+(GB)
+Local Storage
+(TB)
+On-Demand Price (Per Hour)
+Spot Price (Per Hour)
+NVIDIA GB300 NVL72
+41
+279
+144
+960
+61.44
+Contact sales
+N/A
+NVIDIA GB200 NVL72
+41
+186
+144
+960
+30.72
+$42.00
+N/A
+NVIDIA HGX B300
+8
+270
+192
+4,096
+61.44
+Contact sales
+$36.70
+NVIDIA HGX B200
+8
+180
+128
+2,048
+61.44
+$68.80
+$34.87
+NVIDIA RTX PRO 6000 Blackwell Server Edition (High Memory)
+8
+96
+128
+1,024
+7.68
+$20.00
+$11.01
+NVIDIA RTX PRO 6000 Blackwell Server Edition (Standard Memory)
+8
+96
+128
+512
+7.68
+Contact sales
+$9.56
+NVIDIA GH200
+1
+96
+72
+480
+7.68
+$6.50
+N/A
+NVIDIA HGX H100
+8
+80
+128
+2,048
+61.44
+$49.24
+$19.51
+NVIDIA L40
+8
+48
+128
+1,024
+7.68
+$10.00
+N/A
+NVIDIA HGX H200
+8
+141
+128
+2,048
+61.44
+$50.44
+$20.64
+NVIDIA L40S
+8
+48
+128
+1,024
+7.68
+$18.00
+N/A
+NVIDIA A100
+8
+80
+128
+2,048
+7.68
+$21.60
+$9.51
+
+1 Each instance is comprised of 2 GB200 or GB300 Superchips, where each Superchip has 1 Grace CPU and 2 Blackwell GPUs.
+
+2 Pricing based on GPUs is exclusively applicable to the CoreWeave inference platform customers. Please contact your account executive for more information.
+
+CoreWeave Cloud storage usage is calculated in binary gigabytes (GB), where 1 GB is 230 bytes. This unit of measurement is also known as a gibibyte (GiB), defined by the International Electrotechnical Commission (IEC). Similarly, 1 TB is 240 bytes, i.e. 1024 GBs.
+
+On-demand CPU instances
+
+We know AI training and serving workloads don’t exist in a vacuum. Get On-Demand or Spot CPUs to support GPUs during the overall lifecycle of model training jobs.
+
+REGION: NORTH AMERICA
+CPU Model
+CPU Type
+vCPUs
+System RAM (GB)
+Local Storage (TB)
+On-Demand Price (Per Hour)
+Spot Price (Per Hour)
+AMD Genoa (9274F)
+High Performance
+96
+768
+7.68
+$6.42
+$3.50
+AMD Genoa (9454)
+General Purpose
+192
+1,536
+7.68
+$7.78
+$3.32
+AMD Genoa (9454)
+General Purpose (High Storage)
+192
+1,536
+61.44
+$8.86
+$4.36
+AMD Genoa (9654)
+High Core
+384
+1,536
+61.44
+$7.54
+$4.23
+AMD Turin (9655P)
+General Purpose (High Memory)
+192
+1,536
+7.68
+$8.18
+$4.62
+AMD Turin (9655P)
+General Purpose (Standard Memory)
+192
+768
+7.68
+Contact Sales
+$3.94
+AMD Turin (9655P)
+General Purpose (High Storage)
+192
+1,536
+61.44
+$9.31
+$5.25
+Intel Emerald Rapids (8562Y+)
+General Purpose (High Memory)
+64
+512
+7.68
+$5.31
+$3.27
+Intel Emerald Rapids (8562Y+)
+General Purpose (Standard Memory)
+64
+256
+7.68
+Contact Sales
+$2.86
+Intel Ice Lake (6342)
+General Purpose
+96
+384
+19.2
+$3.36
+$2.29
+REGION: EUROPE
+CPU Model
+CPU Type
+vCPUs
+System RAM (GB)
+Local Storage (TB)
+On-Demand Price (Per Hour)
+Spot Price (Per Hour)
+AMD Genoa (9274F)
+High Performance
+96
+768
+7.68
+$6.42
+$3.41
+AMD Genoa (9454)
+General Purpose
+192
+1,536
+7.68
+$7.78
+$3.23
+AMD Genoa (9454)
+General Purpose (High Storage)
+192
+1,536
+61.44
+$8.86
+$4.27
+AMD Genoa (9654)
+High Core
+384
+1,536
+61.44
+$7.54
+$4.14
+AMD Turin (9655P)
+General Purpose (High Memory)
+192
+1,536
+7.68
+$8.18
+$4.63
+AMD Turin (9655P)
+General Purpose (Standard Memory)
+192
+768
+7.68
+Contact Sales
+$4.04
+AMD Turin (9655P)
+General Purpose (High Storage)
+192
+1,536
+61.44
+$9.31
+$5.26
+Intel Emerald Rapids (8562Y+)
+General Purpose (High Memory)
+64
+512
+7.68
+$5.31
+$3.31
+Intel Emerald Rapids (8562Y+)
+General Purpose (Standard Memory)
+64
+256
+7.68
+Contact Sales
+$2.98
+Intel Ice Lake (6342)
+General Purpose
+96
+384
+19.2
+$3.36
+$2.19
+Reserved Compute Capacity
+
+CoreWeave offers up to 60% discounts over our On-Demand prices for committed usage. To learn more about these options, please reach out to us today.
+
+Storage
+
+At CoreWeave, our storage pricing is built to remove barriers to innovation. With no ingress, egress, or transfer fees, customers gain the freedom to move data as their workloads demand, without worrying about hidden costs or vendor lock-in.
+
+This transparency empowers teams to scale quickly, experiment boldly, and adapt their strategies with confidence, knowing their infrastructure won’t hold them back from pushing the limits of what’s possible.
+
+Product
+Tier
+Price
+CoreWeave AI Object Storage
+Hot
+$0.06/GB/mo
+CoreWeave AI Object Storage
+Warm
+$0.03/GB/mo
+CoreWeave AI Object Storage
+Cold
+$0.015/GB/mo
+CoreWeave AI Object Storage
+Archive (Limited Availability, Contact CoreWeave)
+$0.0125/GB/mo
+Distributed File Storage
+-
+$0.070/GB/mo
+Egress and Input Output Operations per Second
+-
+Free
+
+CoreWeave Cloud storage usage is calculated in binary gigabytes (GB), where 1 GB is 2³⁰ bytes. This unit of measurement is also known as a gibibyte (GiB), defined by the International Electrotechnical Commission (IEC). Similarly, 1 TB is 2⁴⁰ bytes, i.e. 1024 GBs.
+
+ Networking
+
+Networking on CoreWeave is built to empower scaling computational workloads.
+
+Plus, if your workload requires significant throughput, we will work with our partners to structure IP transit or peering agreements that work for your business.
+
+Networking Pricing
+Product
+Price
+NAT Gateway
+Free
+Data transfer between CoreWeave and internet
+Free
+Data transfer within CoreWeave
+Free
+VPC
+Free
+Public IP Address
+$4.00 per IP / month
+Bring Your Own IP
+$4.00 one-time setup fee per IP
+Direct Connect (DX) monthly billing rates
+DX Speed
+Dedicated DX1 Price
+Virtual DX2 Price
+400G
+$50,000
+Not Available
+100G
+$12,500
+Not Available
+10G
+$1,250
+$1,500
+
+1 Dedicated DX has no setup fee, and does not include the cost of cross connect. If you need us to order and manage the cross connect with the colocation provider for you, those costs are added to the Direct Connect price shown above.
+
+2 Virtual DX has no setup fee, and does not include the cost of your ports at Equinix Fabric or Megaport. You will order ports from them and pay their charges separately. It also does not include the cost of virtual connections. If you need us to order and manage the virtual connections for you, those costs are added to the Direct Connect price shown above.
+
+Managed Kubernetes
+
+Our managed Kubernetes environment is purpose-built for building, training, and deploying AI Applications.
+
+Product
+Price
+SUNK
+Free*
+CoreWeave Kubernetes Service Control Plane
+Free
+
+*Excludes CPU Resource Usage required to operate SUNK
+
+Start building today
+Talk to an expert
+Learn more
+
+CoreWeave classic pricing
+
+Spot Terms of Service
+
+Compute
+
+Our infrastructure is built from the ground up to give AI teams access to the latest and greatest NVIDIA GPUs. Accelerate and streamline your workloads for superior price-to-performance ratios.
+
+Superpower your GenAI workloads today and build on CKS.
+
+Contact us
+Login
+Also of interest
+Optimizing AI Workloads with Right GPUsPowerful NVIDIA HGX H100 and HGX H200Flexible Cloud Pricing for GPUs and CPUs
+Products
+GPU Compute
+CPU Compute
+Storage Services
+Networking Services
+Managed Services
+Bare Metal Servers
+Platform
+Fleet LifeCycle Controller
+
+Node LifeCycle Controller
+Tensorizer
+Observability
+Solutions
+AI Model Training
+AI Inference
+VFX & Rendering
+Mission Control
+AI Infrastructure
+Why CoreWeave
+Resources
+Customer Stories
+Documentation
+Status
+Pricing
+Resource Center
+Events & Webinars
+About
+About Us
+Careers
+Life at CoreWeave
+Newsroom
+Investor Relations
+Supplier Code of Conduct
+Privacy Policy
+Terms of Service
+Do Not Sell or Share My Personal Information
+© CoreWeave.
+290 W Mt Pleasant Ave
+Suite 4100
+Livingston, NJ 07039
+We use cookies to personalize content, enhance site navigation, and analyze usage. You can manage your preferences or opt out at any time.
+Manage My Cookie Settings
+Do Not Sell or Share My Personal Information
