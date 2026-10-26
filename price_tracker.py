@@ -3,14 +3,23 @@
 GPU 임대가 · 메모리 가격 수집기 (매일 실행)
 
 가격 페이지를 Playwright(Chromium)로 열어 화면 텍스트를 읽고, 정해진 품목의 가격을 뽑는다.
-- 매일 수집한 값은 price_history.csv 한 파일에 날짜별로 계속 쌓인다(전체 이력).
-- 대시보드용 JSON은 주(월요일 기준, Asia/Seoul) 단위로, 그 주의 가장 최근 값을 담는다.
+- 날짜는 '그 값이 어느 날짜 값인가' 기준이다.
+    메모리(TrendForce): 표의 Last Update 날짜(대만 GMT+8 표기 그대로).
+    GPU (모두 미국 동부시각 기준):
+      RunPod        페이지의 "Updated <날짜>"
+      GetDeploying  "Updated N minutes ago" → 수집 시각에서 N분을 뺀 날짜
+      Lambda·CoreWeave  날짜 표시가 없어 수집 날짜. price_changed로 가격이 바뀐 날을 표시한다.
+- 값은 price_history.csv 한 파일에 날짜별로 쌓인다. 원자료가 갱신되지 않으면 같은 날짜 행이
+  다시 쓰일 뿐 새 행이 생기지 않는다(매일 돌려도 중복 없음).
+- 대시보드용 JSON은 주(그 날짜가 속한 주의 월요일) 단위로, 그 주의 가장 최근 값을 담는다.
 
 출력 (--out-dir, 기본 ./price_data):
   gpu_prices.json     [{week, gpu, source, kind, price}]            kind: list | market_low | market_median
   memory_prices.json  [{week, item, category, price, session_change_pct, source_date}]
   price_history.csv   전체 일별 이력 (한 줄 = 수집일 × 품목)
-                      date, week, group, item, category, source, kind, price, change_pct, source_date, unit
+                      date(값의 기준일), week, group, item, category, source, kind, price, change_pct,
+                      source_date, unit, collected_at(수집 시각, KST), date_basis(날짜 근거),
+                      price_changed(같은 품목 직전 기록 대비: Y 바뀜 / N 같음 / first 첫 기록)
   run_log.json        마지막 실행 결과 (가져온 개수, 못 가져온 항목, 페이지 오류)
 
 사용법:
@@ -20,7 +29,8 @@ GPU 임대가 · 메모리 가격 수집기 (매일 실행)
 
 원칙:
   - 페이지에서 찾지 못한 값은 행을 만들지 않는다(추정·이월 없음). run_log.json의 missing에 남긴다.
-  - 같은 날 다시 돌리면 CSV의 그날 행이 새 값으로 바뀐다(중복 없음). 지난 날짜 행은 건드리지 않는다.
+  - 같은 기준일·품목 행이 이미 있으면 새 값으로 바뀐다(중복 없음). 다른 날짜 행은 건드리지 않는다.
+  - 예전 형식(메모리 행이 수집일로 적힌 것)은 실행할 때 기준일로 자동 정리된다.
   - 같은 주에 다시 돌리면 JSON은 그 주에 새로 가져온 품목의 행만 교체된다(못 가져온 품목은 기존 값 유지).
   - 값이 상식 범위를 벗어나면(파싱 오류 가능성) 버리고 missing에 남긴다.
 """
@@ -34,8 +44,10 @@ import re
 import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 KST = timezone(timedelta(hours=9))
+US_ET = ZoneInfo("America/New_York")  # GPU 사이트(미국 업체) 날짜 기준
 
 # ------------------------------------------------------------------ 수집 대상
 
@@ -111,13 +123,45 @@ MEM_TARGETS = {  # TrendForce는 표마다 페이지가 따로 있다
 # ------------------------------------------------------------------ 파서 (텍스트 → 값)
 
 
+def monday(day: str) -> str:
+    d = datetime.strptime(day, "%Y-%m-%d").date()
+    return (d - timedelta(days=d.weekday())).isoformat()
+
+
 def to_num(s: str) -> float:
     return float(s.replace(",", ""))
 
 
-def parse_gpu(url: str, text: str, week: str, missing: list) -> list:
+MONTHS = {m: i for i, m in enumerate(["january", "february", "march", "april", "may", "june", "july", "august",
+                                       "september", "october", "november", "december"], 1)}
+REL_UNITS = {"second": 1, "minute": 60, "hour": 3600, "day": 86400, "week": 604800}
+
+
+def gpu_source_date(url: str, text: str, now_et: datetime) -> tuple[str, str]:
+    """GPU 페이지 값의 기준일(미국 동부 날짜)과 그 근거."""
+    if url == RUNPOD:
+        m = re.search(r"Updated\s+([A-Za-z]+)\.?\s+(\d{1,2}),?\s+(\d{4})", text)
+        if m and m.group(1).lower()[:3] in [k[:3] for k in MONTHS]:
+            mo = next(v for k, v in MONTHS.items() if k[:3] == m.group(1).lower()[:3])
+            return f"{int(m.group(3)):04d}-{mo:02d}-{int(m.group(2)):02d}", "page_updated"
+    if url == GETDEPLOYING:
+        m = re.search(r"Updated\s+(?:(\d+|an?|one)\s+(second|minute|hour|day|week)s?\s+ago|(just now))", text, re.I)
+        if m:
+            if m.group(3):
+                secs = 0
+            else:
+                n = 1 if m.group(1).lower() in ("a", "an", "one") else int(m.group(1))
+                secs = n * REL_UNITS[m.group(2).lower()]
+            return (now_et - timedelta(seconds=secs)).date().isoformat(), "page_updated_relative"
+    return now_et.date().isoformat(), "collected_us_et"
+
+
+def parse_gpu(url: str, text: str, week: str, missing: list, now_et: datetime | None = None) -> list:
     rows = []
     src = SOURCE_NAME[url]
+    now_et = now_et or datetime.now(US_ET)
+    sdate, basis = gpu_source_date(url, text, now_et)
+    week = monday(sdate)
     for gpu, pat, mode in GPU_TARGETS[url]:
         optional = gpu.endswith("?")
         gpu = gpu.rstrip("?")
@@ -136,7 +180,8 @@ def parse_gpu(url: str, text: str, week: str, missing: list) -> list:
             pairs = [("list", to_num(m.group(1)))]
         for kind, price in pairs:
             if lo <= price <= hi:
-                rows.append({"week": week, "gpu": gpu, "source": src, "kind": kind, "price": price})
+                rows.append({"week": week, "gpu": gpu, "source": src, "kind": kind, "price": price,
+                             "source_date": sdate, "date_basis": basis})
             else:
                 missing.append(f"{src} {gpu} {kind} (범위 밖 값 {price})")
     return rows
@@ -178,8 +223,9 @@ def parse_memory(url: str, text: str, week: str, missing: list) -> list:
         if price <= 0:
             missing.append(f"TrendForce {item} (범위 밖 값 {price})")
             continue
-        rows.append({"week": week, "item": item, "category": cat, "price": price,
-                     "session_change_pct": change, "source_date": f"{y}-{int(mo):02d}-{int(d):02d}"})
+        sdate = f"{y}-{int(mo):02d}-{int(d):02d}"
+        rows.append({"week": monday(sdate), "item": item, "category": cat, "price": price,
+                     "session_change_pct": change, "source_date": sdate})
     return rows
 
 
@@ -263,28 +309,45 @@ def merge(path: Path, new_rows: list, keys: tuple) -> int:
     if not new_rows:
         return 0
     k = lambda r: tuple(r.get(x) for x in keys)  # noqa: E731
-    fresh = {k(r) for r in new_rows}
-    kept = [r for r in old if k(r) not in fresh]
-    rows = sorted(kept + new_rows, key=lambda r: r.get("week", ""))
+    migrated = []
+    for r in old:  # 예전 형식 정리
+        if "gpu" in r and not r.get("source_date"):
+            # 기준일 도입 전 GPU 행(2026-10-26 KST 11시 수집 = 미국 동부 10-25). RunPod는 페이지 날짜 행으로 대체되므로 버린다.
+            if r.get("source") == "RunPod":
+                continue
+            r["source_date"] = (datetime.strptime(r["week"], "%Y-%m-%d") - timedelta(days=1)).date().isoformat()
+            r["date_basis"] = "collected_us_et"
+        if r.get("source_date"):
+            r["week"] = monday(r["source_date"])
+        migrated.append(r)
+    old = migrated
+    latest = {}
+    for r in old + new_rows:  # 같은 주·품목은 기준일이 가장 늦은 값(같으면 나중 것)만 남긴다
+        cur = latest.get(k(r))
+        if cur is None or (r.get("source_date") or "") >= (cur.get("source_date") or ""):
+            latest[k(r)] = r
+    rows = sorted(latest.values(), key=lambda r: r.get("week", ""))
     path.write_text(json.dumps(rows, ensure_ascii=False, indent=0), encoding="utf-8")
     return len(new_rows)
 
 
-CSV_COLS = ["date", "week", "group", "item", "category", "source", "kind", "price", "change_pct", "source_date", "unit"]
+CSV_COLS = ["date", "week", "group", "item", "category", "source", "kind", "price", "change_pct", "source_date", "unit",
+            "collected_at", "date_basis", "price_changed"]
 
 
-def append_history(path: Path, day: str, gpu_rows: list, mem_rows: list) -> int:
-    """오늘 수집한 값을 전체 이력 CSV에 붙인다. 같은 날·같은 품목 행이 있으면 새 값으로 바꾼다."""
+def append_history(path: Path, day: str, stamp: str, gpu_rows: list, mem_rows: list) -> int:
+    """수집한 값을 전체 이력 CSV에 붙인다. date = 값의 기준일. 같은 기준일·품목 행이 있으면 새 값으로 바꾼다."""
     new = []
     for r in gpu_rows:
-        new.append({"date": day, "week": r["week"], "group": "GPU", "item": r["gpu"], "category": "GPU 임대가",
-                    "source": r["source"], "kind": r["kind"], "price": r["price"], "change_pct": "",
-                    "source_date": "", "unit": "USD/GPU-hr"})
+        new.append({"date": r.get("source_date") or day, "week": r["week"], "group": "GPU", "item": r["gpu"],
+                    "category": "GPU 임대가", "source": r["source"], "kind": r["kind"], "price": r["price"],
+                    "change_pct": "", "source_date": r.get("source_date", ""), "unit": "USD/GPU-hr",
+                    "collected_at": stamp, "date_basis": r.get("date_basis", "")})
     for r in mem_rows:
-        new.append({"date": day, "week": r["week"], "group": "Memory", "item": r["item"], "category": r["category"],
+        new.append({"date": r["source_date"], "week": r["week"], "group": "Memory", "item": r["item"], "category": r["category"],
                     "source": "TrendForce", "kind": "contract" if "고정가" in r["category"] else "spot",
                     "price": r["price"], "change_pct": r["session_change_pct"], "source_date": r["source_date"],
-                    "unit": "USD"})
+                    "unit": "USD", "collected_at": stamp, "date_basis": "page_last_update"})
     if not new:
         return 0
     key = lambda r: (r["date"], r["group"], r["item"], r["source"], r["kind"])  # noqa: E731
@@ -292,8 +355,37 @@ def append_history(path: Path, day: str, gpu_rows: list, mem_rows: list) -> int:
     if path.exists():
         with path.open(encoding="utf-8-sig", newline="") as f:
             old = list(csv.DictReader(f))
+    for r in old:  # 예전 형식 정리: 메모리 행의 date를 기준일로, 수집 시각이 없으면 예전 date로
+        if not r.get("collected_at"):
+            r["collected_at"] = r.get("date", "")
+        if not r.get("date_basis"):
+            if r.get("group") == "Memory":
+                r["date_basis"] = "page_last_update"
+            else:  # 기준일 도입 전 GPU 행: KST 수집일 → 미국 동부 날짜(전날). RunPod는 페이지 날짜 행으로 대체
+                r["date_basis"] = "drop" if r.get("source") == "RunPod" else "collected_us_et"
+                if r["date_basis"] != "drop":
+                    d = (datetime.strptime(r["date"], "%Y-%m-%d") - timedelta(days=1)).date().isoformat()
+                    r["date"], r["source_date"], r["week"] = d, d, monday(d)
+        if r.get("group") == "Memory" and r.get("source_date"):
+            r["date"] = r["source_date"]
+            r["week"] = monday(r["source_date"])
+    old = [r for r in old if r.get("date_basis") != "drop"]
+    dedup = {}
+    for r in old:
+        dedup[key(r)] = r
+    old = list(dedup.values())
     fresh = {key(r) for r in new}
     rows = [r for r in old if key(r) not in fresh] + new
+    # 같은 품목의 직전 기준일 기록과 가격 비교
+    ident = lambda r: (r["group"], r["item"], r["source"], r["kind"])  # noqa: E731
+    by_item = {}
+    for r in sorted(rows, key=lambda r: r["date"]):
+        prev = by_item.get(ident(r))
+        if prev is None:
+            r["price_changed"] = "first"
+        else:
+            r["price_changed"] = "N" if abs(float(prev["price"]) - float(r["price"])) < 1e-9 else "Y"
+        by_item[ident(r)] = r
     rows.sort(key=lambda r: (r["date"], r["group"], r["category"], r["item"], r["source"], r["kind"]))
     with path.open("w", encoding="utf-8-sig", newline="") as f:  # BOM: 엑셀에서 한글이 안 깨지게
         w = csv.DictWriter(f, fieldnames=CSV_COLS, extrasaction="ignore")
@@ -325,7 +417,7 @@ def main() -> int:
     gpu_rows, mem_rows = [], []
     for u in GPU_TARGETS:
         if u in texts:
-            gpu_rows += parse_gpu(u, texts[u], week, missing)
+            gpu_rows += parse_gpu(u, texts[u], week, missing, datetime.now(US_ET))
         else:
             missing.append(f"{SOURCE_NAME[u]} 페이지 전체")
     for u in MEM_TARGETS:
@@ -336,7 +428,8 @@ def main() -> int:
 
     n_gpu = merge(out / "gpu_prices.json", gpu_rows, ("week", "gpu", "source", "kind"))
     n_mem = merge(out / "memory_prices.json", mem_rows, ("week", "item"))
-    n_csv = append_history(out / "price_history.csv", now.date().isoformat(), gpu_rows, mem_rows)
+    n_csv = append_history(out / "price_history.csv", now.date().isoformat(), now.isoformat(timespec="seconds"),
+                           gpu_rows, mem_rows)
     log = {"run_at": now.isoformat(timespec="seconds"), "week": week,
            "gpu_rows": n_gpu, "memory_rows": n_mem, "history_rows_today": n_csv, "missing": missing, "page_errors": errors}
     (out / "run_log.json").write_text(json.dumps(log, ensure_ascii=False, indent=1), encoding="utf-8")
