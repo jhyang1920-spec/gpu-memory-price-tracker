@@ -1,10 +1,11 @@
-# GPU 임대가(GetDeploying·Lambda·RunPod·CoreWeave) + 메모리 가격(TrendForce) 주간 수집
+# GPU 임대가(GetDeploying·Lambda·RunPod·CoreWeave) + 메모리 가격(TrendForce) 매일 수집
+# 결과: price_data/price_history.csv(전체 일별 이력) + 대시보드용 주간 JSON
 name: GPU memory prices weekly
 
 on:
   schedule:
-    - cron: "0 2 * * 2"   # 매주 화요일 02:00 UTC (한국 11:00)
-  workflow_dispatch:
+    - cron: "0 20 * * *"   # 매일 20:00 UTC (한국 5:00)
+  workflow_dispatch:       # 수동 실행 버튼
     inputs:
       dump_text:
         description: "페이지 텍스트를 price_data/_debug/에 저장 (파서 점검용, true/false)"
@@ -40,5 +41,5 @@ jobs:
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add price_data
-          git diff --cached --quiet || git commit -m "GPU/memory prices $(date -u +%F)"
+          git diff --cached --quiet || git commit -m "GPU/memory prices $(TZ=Asia/Seoul date +%F)"
           git push
