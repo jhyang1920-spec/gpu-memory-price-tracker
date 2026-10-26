@@ -1,29 +1,34 @@
 #!/usr/bin/env python3
 """
-GPU 임대가 · 메모리 가격 주간 수집기
+GPU 임대가 · 메모리 가격 수집기 (매일 실행)
 
-가격 페이지를 Playwright(Chromium)로 열어 화면 텍스트를 읽고, 정해진 품목의 가격을 뽑아
-주간(월요일 기준, Asia/Seoul) 행으로 누적 저장한다.
+가격 페이지를 Playwright(Chromium)로 열어 화면 텍스트를 읽고, 정해진 품목의 가격을 뽑는다.
+- 매일 수집한 값은 price_history.csv 한 파일에 날짜별로 계속 쌓인다(전체 이력).
+- 대시보드용 JSON은 주(월요일 기준, Asia/Seoul) 단위로, 그 주의 가장 최근 값을 담는다.
 
 출력 (--out-dir, 기본 ./price_data):
   gpu_prices.json     [{week, gpu, source, kind, price}]            kind: list | market_low | market_median
   memory_prices.json  [{week, item, category, price, session_change_pct, source_date}]
+  price_history.csv   전체 일별 이력 (한 줄 = 수집일 × 품목)
+                      date, week, group, item, category, source, kind, price, change_pct, source_date, unit
   run_log.json        마지막 실행 결과 (가져온 개수, 못 가져온 항목, 페이지 오류)
 
 사용법:
   pip install playwright && python -m playwright install --with-deps chromium
-  python price_tracker.py                 # 이번 주 행을 새로 받아 덮어쓰기
+  python price_tracker.py                 # 오늘 값 수집 → CSV에 추가, 이번 주 JSON 갱신
   python price_tracker.py --dump-text     # 각 페이지 텍스트를 price_data/_debug/에 저장 (파서 점검용)
 
 원칙:
   - 페이지에서 찾지 못한 값은 행을 만들지 않는다(추정·이월 없음). run_log.json의 missing에 남긴다.
-  - 같은 주에 다시 돌리면 그 주에 새로 가져온 품목의 행만 교체된다(못 가져온 품목은 기존 값 유지).
+  - 같은 날 다시 돌리면 CSV의 그날 행이 새 값으로 바뀐다(중복 없음). 지난 날짜 행은 건드리지 않는다.
+  - 같은 주에 다시 돌리면 JSON은 그 주에 새로 가져온 품목의 행만 교체된다(못 가져온 품목은 기존 값 유지).
   - 값이 상식 범위를 벗어나면(파싱 오류 가능성) 버리고 missing에 남긴다.
 """
 
 from __future__ import annotations
 
 import argparse
+import csv
 import json
 import re
 import sys
@@ -265,6 +270,38 @@ def merge(path: Path, new_rows: list, keys: tuple) -> int:
     return len(new_rows)
 
 
+CSV_COLS = ["date", "week", "group", "item", "category", "source", "kind", "price", "change_pct", "source_date", "unit"]
+
+
+def append_history(path: Path, day: str, gpu_rows: list, mem_rows: list) -> int:
+    """오늘 수집한 값을 전체 이력 CSV에 붙인다. 같은 날·같은 품목 행이 있으면 새 값으로 바꾼다."""
+    new = []
+    for r in gpu_rows:
+        new.append({"date": day, "week": r["week"], "group": "GPU", "item": r["gpu"], "category": "GPU 임대가",
+                    "source": r["source"], "kind": r["kind"], "price": r["price"], "change_pct": "",
+                    "source_date": "", "unit": "USD/GPU-hr"})
+    for r in mem_rows:
+        new.append({"date": day, "week": r["week"], "group": "Memory", "item": r["item"], "category": r["category"],
+                    "source": "TrendForce", "kind": "contract" if "고정가" in r["category"] else "spot",
+                    "price": r["price"], "change_pct": r["session_change_pct"], "source_date": r["source_date"],
+                    "unit": "USD"})
+    if not new:
+        return 0
+    key = lambda r: (r["date"], r["group"], r["item"], r["source"], r["kind"])  # noqa: E731
+    old = []
+    if path.exists():
+        with path.open(encoding="utf-8-sig", newline="") as f:
+            old = list(csv.DictReader(f))
+    fresh = {key(r) for r in new}
+    rows = [r for r in old if key(r) not in fresh] + new
+    rows.sort(key=lambda r: (r["date"], r["group"], r["category"], r["item"], r["source"], r["kind"]))
+    with path.open("w", encoding="utf-8-sig", newline="") as f:  # BOM: 엑셀에서 한글이 안 깨지게
+        w = csv.DictWriter(f, fieldnames=CSV_COLS, extrasaction="ignore")
+        w.writeheader()
+        w.writerows(rows)
+    return len(new)
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--out-dir", default="price_data")
@@ -299,8 +336,9 @@ def main() -> int:
 
     n_gpu = merge(out / "gpu_prices.json", gpu_rows, ("week", "gpu", "source", "kind"))
     n_mem = merge(out / "memory_prices.json", mem_rows, ("week", "item"))
+    n_csv = append_history(out / "price_history.csv", now.date().isoformat(), gpu_rows, mem_rows)
     log = {"run_at": now.isoformat(timespec="seconds"), "week": week,
-           "gpu_rows": n_gpu, "memory_rows": n_mem, "missing": missing, "page_errors": errors}
+           "gpu_rows": n_gpu, "memory_rows": n_mem, "history_rows_today": n_csv, "missing": missing, "page_errors": errors}
     (out / "run_log.json").write_text(json.dumps(log, ensure_ascii=False, indent=1), encoding="utf-8")
     print(json.dumps(log, ensure_ascii=False, indent=1))
     # 아무것도 못 가져오면 실패로 표시 (Actions에서 빨간불)
