@@ -1,135 +1,236 @@
 [
 {
-"week": "2026-10-26",
+"week": "2026-10-05",
+"gpu": "B200",
+"source": "RunPod",
+"kind": "list",
+"price": 7.99,
+"source_date": "2026-10-08",
+"date_basis": "page_updated"
+},
+{
+"week": "2026-10-05",
+"gpu": "H200",
+"source": "RunPod",
+"kind": "list",
+"price": 5.29,
+"source_date": "2026-10-08",
+"date_basis": "page_updated"
+},
+{
+"week": "2026-10-05",
+"gpu": "H100",
+"source": "RunPod",
+"kind": "list",
+"price": 3.99,
+"source_date": "2026-10-08",
+"date_basis": "page_updated"
+},
+{
+"week": "2026-10-05",
+"gpu": "A100 80GB",
+"source": "RunPod",
+"kind": "list",
+"price": 1.79,
+"source_date": "2026-10-08",
+"date_basis": "page_updated"
+},
+{
+"week": "2026-10-19",
 "gpu": "H100",
 "source": "GetDeploying",
 "kind": "market_low",
-"price": 1.79
+"price": 1.79,
+"source_date": "2026-10-25",
+"date_basis": "collected_us_et"
 },
 {
-"week": "2026-10-26",
+"week": "2026-10-19",
 "gpu": "H100",
 "source": "GetDeploying",
 "kind": "market_median",
-"price": 3.85
+"price": 3.85,
+"source_date": "2026-10-25",
+"date_basis": "collected_us_et"
 },
 {
-"week": "2026-10-26",
+"week": "2026-10-19",
 "gpu": "H200",
 "source": "GetDeploying",
 "kind": "market_low",
-"price": 2.09
+"price": 2.09,
+"source_date": "2026-10-25",
+"date_basis": "collected_us_et"
 },
 {
-"week": "2026-10-26",
+"week": "2026-10-19",
 "gpu": "H200",
 "source": "GetDeploying",
 "kind": "market_median",
-"price": 4.78
+"price": 4.78,
+"source_date": "2026-10-25",
+"date_basis": "collected_us_et"
 },
 {
-"week": "2026-10-26",
+"week": "2026-10-19",
 "gpu": "B200",
 "source": "GetDeploying",
 "kind": "market_low",
-"price": 3.75
+"price": 3.75,
+"source_date": "2026-10-25",
+"date_basis": "collected_us_et"
 },
 {
-"week": "2026-10-26",
+"week": "2026-10-19",
 "gpu": "B200",
 "source": "GetDeploying",
 "kind": "market_median",
-"price": 7.99
+"price": 7.99,
+"source_date": "2026-10-25",
+"date_basis": "collected_us_et"
 },
 {
-"week": "2026-10-26",
+"week": "2026-10-19",
 "gpu": "A100 80GB",
 "source": "GetDeploying",
 "kind": "market_low",
-"price": 0.89
+"price": 0.89,
+"source_date": "2026-10-25",
+"date_basis": "collected_us_et"
 },
 {
-"week": "2026-10-26",
+"week": "2026-10-19",
 "gpu": "A100 80GB",
 "source": "GetDeploying",
 "kind": "market_median",
-"price": 1.88
+"price": 1.88,
+"source_date": "2026-10-25",
+"date_basis": "collected_us_et"
+},
+{
+"week": "2026-10-19",
+"gpu": "B200",
+"source": "Lambda",
+"kind": "list",
+"price": 6.69,
+"source_date": "2026-10-25",
+"date_basis": "collected_us_et"
+},
+{
+"week": "2026-10-19",
+"gpu": "H100",
+"source": "Lambda",
+"kind": "list",
+"price": 3.99,
+"source_date": "2026-10-25",
+"date_basis": "collected_us_et"
+},
+{
+"week": "2026-10-19",
+"gpu": "A100 80GB",
+"source": "Lambda",
+"kind": "list",
+"price": 2.79,
+"source_date": "2026-10-25",
+"date_basis": "collected_us_et"
+},
+{
+"week": "2026-10-19",
+"gpu": "B200",
+"source": "CoreWeave",
+"kind": "list",
+"price": 8.6,
+"source_date": "2026-10-25",
+"date_basis": "collected_us_et"
+},
+{
+"week": "2026-10-19",
+"gpu": "H200",
+"source": "CoreWeave",
+"kind": "list",
+"price": 6.31,
+"source_date": "2026-10-25",
+"date_basis": "collected_us_et"
+},
+{
+"week": "2026-10-19",
+"gpu": "H100",
+"source": "CoreWeave",
+"kind": "list",
+"price": 6.16,
+"source_date": "2026-10-25",
+"date_basis": "collected_us_et"
+},
+{
+"week": "2026-10-19",
+"gpu": "A100 80GB",
+"source": "CoreWeave",
+"kind": "list",
+"price": 2.7,
+"source_date": "2026-10-25",
+"date_basis": "collected_us_et"
 },
 {
 "week": "2026-10-26",
 "gpu": "B200",
 "source": "Lambda",
 "kind": "list",
-"price": 6.69
+"price": 6.69,
+"source_date": "2026-10-26",
+"date_basis": "collected_us_et"
 },
 {
 "week": "2026-10-26",
 "gpu": "H100",
 "source": "Lambda",
 "kind": "list",
-"price": 3.99
+"price": 3.99,
+"source_date": "2026-10-26",
+"date_basis": "collected_us_et"
 },
 {
 "week": "2026-10-26",
 "gpu": "A100 80GB",
 "source": "Lambda",
 "kind": "list",
-"price": 2.79
-},
-{
-"week": "2026-10-26",
-"gpu": "B200",
-"source": "RunPod",
-"kind": "list",
-"price": 7.99
-},
-{
-"week": "2026-10-26",
-"gpu": "H200",
-"source": "RunPod",
-"kind": "list",
-"price": 5.29
-},
-{
-"week": "2026-10-26",
-"gpu": "H100",
-"source": "RunPod",
-"kind": "list",
-"price": 3.99
-},
-{
-"week": "2026-10-26",
-"gpu": "A100 80GB",
-"source": "RunPod",
-"kind": "list",
-"price": 1.79
+"price": 2.79,
+"source_date": "2026-10-26",
+"date_basis": "collected_us_et"
 },
 {
 "week": "2026-10-26",
 "gpu": "B200",
 "source": "CoreWeave",
 "kind": "list",
-"price": 8.6
+"price": 8.6,
+"source_date": "2026-10-26",
+"date_basis": "collected_us_et"
 },
 {
 "week": "2026-10-26",
 "gpu": "H200",
 "source": "CoreWeave",
 "kind": "list",
-"price": 6.31
+"price": 6.31,
+"source_date": "2026-10-26",
+"date_basis": "collected_us_et"
 },
 {
 "week": "2026-10-26",
 "gpu": "H100",
 "source": "CoreWeave",
 "kind": "list",
-"price": 6.16
+"price": 6.16,
+"source_date": "2026-10-26",
+"date_basis": "collected_us_et"
 },
 {
 "week": "2026-10-26",
 "gpu": "A100 80GB",
 "source": "CoreWeave",
 "kind": "list",
-"price": 2.7
+"price": 2.7,
+"source_date": "2026-10-26",
+"date_basis": "collected_us_et"
 }
 ]
