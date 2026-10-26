@@ -1,0 +1,43 @@
+# GPU 임대가(GetDeploying·Lambda·RunPod·CoreWeave) + 메모리 가격(TrendForce) 주간 수집
+name: GPU memory prices weekly
+
+on:
+  schedule:
+    - cron: "0 2 * * 2"   # 매주 화요일 02:00 UTC (한국 11:00)
+  workflow_dispatch:
+    inputs:
+      dump_text:
+        description: "페이지 텍스트를 price_data/_debug/에 저장 (파서 점검용, true/false)"
+        required: false
+        default: "false"
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Install Playwright
+        run: |
+          pip install playwright==1.47.0
+          python -m playwright install --with-deps chromium
+      - name: Collect
+        run: |
+          if [ "${{ github.event.inputs.dump_text }}" = "true" ]; then
+            python price_tracker.py --out-dir price_data --dump-text
+          else
+            python price_tracker.py --out-dir price_data
+          fi
+      - name: Commit results
+        if: always()
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add price_data
+          git diff --cached --quiet || git commit -m "GPU/memory prices $(date -u +%F)"
+          git push
