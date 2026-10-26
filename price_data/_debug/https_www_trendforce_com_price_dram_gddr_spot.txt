@@ -1,0 +1,89 @@
+Research Report 
+Selected Topics
+Membership 
+Price Trends 
+Insights 
+Roadshow
+Discover 
+Sign In
+Price Trends
+Home  Price Trends
+DRAM Price Trends
+DRAM Spot Price
+DRAM Contract Price
+Module Spot Price
+GDDR Spot Price
+LPDDR Spot Price
+Mobile DRAM Contract Price
+GDDR Spot Price 
+
+Last Update 2026-10-12 14:40 (GMT+8)
+
+Item	Weekly High	Weekly Low	Session High	Session Low	Session Average	Average Change	History
+GDDR5 8Gb	17.50	10.00	17.50	10.00	12.291	▲ 0.38 %	
+GDDR6 8Gb	18.00	10.20	18.00	10.20	12.502	▲ 0.42 %	
+Related Reports
+Specialty DRAM Price Sep. 2026
+
+Consumer DRAM prices are approaching the limit of buyer cost tolerance, with recent contract prices settling slightly higher and the spread between high and low pricing narrowing somewhat. Looking ahead, as major suppliers reallocate capacity to advanced products, the supply of mature node memory will continue to contract; combined with strengthening demand for server storage components, the market supply deficit will persist, keeping prices elevated.
+
+More
+DRAM Monthly Datasheet Oct. 2026
+
+TrendForce offers you a complete analysis on DRAM industry supply/demand sufficiency, cost analysis and price forecast.
+
+More
+
+Category
+
+DRAM (Index)
+NAND Flash
+TFT-LCD (Index)
+PV
+Li-Ion Battery
+About Us
+Research Report
+Tags
+Industry Insights
+Terms of Use
+Privacy Policy
+Membership Terms & Conditions
+Contact Us
+Subscribe to Industry Insights
+Subscribe
+English 
+© 2026 TrendForce Corp. All rights reserved
+
+Last Update 2026-10-23 18:10 (GMT+8)
+Item	Daily High	Daily Low	Session High	Session Low	Session Average	Session Change	History
+DDR5 16Gb (2Gx8) 4800/5600	71.00	47.00	71.00	47.00	61.267	▲ 0.27 %	
+DDR5 16Gb (2Gx8) eTT	30.00	28.30	30.00	28.30	29.00	▲ 0.69 %	
+DDR4 16Gb (2Gx8) 3200	116.00	45.50	116.00	45.50	82.87	▼ -0.30 %	
+DDR4 16Gb (2Gx8) eTT	15.50	13.00	15.50	13.00	13.925	— 0.00 %	
+DDR4 8Gb (1Gx8) 3200	85.00	25.50	85.00	25.50	47.107	▲ 0.23 %	
+DDR4 8Gb (1Gx8) eTT	6.20	5.80	6.20	5.80	5.97	— 0.00 %	
+DDR3 4Gb 512Mx8 1600/1866	21.00	9.90	21.00	9.90	13.842	— 0.00 %	
+Last Update 2026-08-31 14:00 (GMT+8)
+Item	Session High	Session Low	Session Average	Average Change	Low Change	History
+DDR5 8GB SO-DIMM	141.00	118.00	133.00	▲ 2.31 %	▲ 1.72 %	
+DDR4 16GB SO-DIMM	290.00	245.00	270.00	▲ 1.89 %	▲ 4.26 %	
+DDR4 8GB SO-DIMM	148.00	125.00	142.00	▲ 2.16 %	▲ 5.93 %	
+DDR4 16Gb 2Gx8	59.00	47.00	50.00	▲ 4.17 %	▲ 4.44 %	
+DDR4 8Gb 1Gx8	34.50	22.50	25.00	▲ 4.17 %	▲ 4.65 %	
+DDR4 4Gb 256Mx16	16.50	14.00	15.20	▲ 4.83 %	▲ 16.67 %	
+DDR3 4Gb 256Mx16	16.50	14.00	15.20	▲ 4.83 %	▲ 16.67 %	
+Sep. Specialty DRAM price updated on 9/30/2026, click here for details.
+Last Update 2026-10-12 14:40 (GMT+8)
+Item	Weekly High	Weekly Low	Session High	Session Low	Session Average	Average Change	History
+DDR5 UDIMM 16GB 4800/5600	265.00	223.00	265.00	223.00	239.00	— 0.00 %	
+DDR5 RDIMM 32GB 4800/5600	2,420.00	2,130.00	2,420.00	2,130.00	2,185.00	▲ 0.41 %	
+DDR4 UDIMM 16GB 3200	185.00	157.00	185.00	157.00	165.90	▼ -0.78 %	
+Last Update 2026-10-12 14:40 (GMT+8)
+Item	Weekly High	Weekly Low	Session High	Session Low	Session Average	Average Change	History
+GDDR5 8Gb	17.50	10.00	17.50	10.00	12.291	▲ 0.38 %	
+GDDR6 8Gb	18.00	10.20	18.00	10.20	12.502	▲ 0.42 %	
+LPDDR 3 32Gb	LPDDR 3 16Gb	LPDDR 3 8Gb
+LPDDR 4 32Gb	LPDDR 4 16Gb	LPDDR 4 8Gb
+LPDDR5X 16GB	LPDDR5X 12GB	LPDDR5X 8GB
+LPDDR4X 8GB	LPDDR4X 4GB	
+3Q26 Mobile DRAM contract price updated on 8/3/2026, click here for details.

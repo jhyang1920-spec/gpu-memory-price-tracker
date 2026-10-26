@@ -1,0 +1,103 @@
+Research Report 
+Selected Topics
+Membership 
+Price Trends 
+Insights 
+Roadshow
+Discover 
+Sign In
+Price Trends
+Home  Price Trends
+NAND Flash Price Trends
+NAND Flash Spot Price
+NAND Flash Contract Price
+Wafer Spot Price
+Memory Card Spot Price
+PC-Client OEM SSD Contract Price
+SSD Street Price
+NAND Flash Wafer Contract Price
+eMMC Spot Price
+eMMC/UFS Contract Price
+Wafer Spot Price 
+
+Last Update 2026-10-12 14:40 (GMT+8)
+
+Item	Weekly High	Weekly Low	Session High	Session Low	Session Average	Session Change	History
+512Gb TLC	21.00	16.80	21.00	16.80	18.833	— 0.00 %	
+256Gb TLC	20.00	16.80	20.00	16.80	18.365	— 0.00 %	
+128Gb TLC	15.00	8.00	15.00	8.00	9.967	— 0.00 %	
+Related Reports
+NAND Flash Wafer Contract Price Sep. 2026
+
+Driven by weak consumer end-market demand, NAND Flash wafer prices have stagnated at high levels. Although enterprise demand remains strong due to AI, inventory continues to pile up on the consumer side, leading suppliers to manage stock through bundled sales. Buyers show extremely low willingness to chase higher prices, with only select specifications seeing slight increases while overall prices consolidate sideways. If consumer inventory digestion continues to fall short of expectations, market prices face a heightened risk of a downward pull-back.
+
+More
+NAND Flash Wafer Contract Price Aug. 2026
+
+High prices of prime wafers are squeezing profits for module makers. Coupled with sluggish end-user demand, manufacturers are shifting to purchase downgraded materials to supply secondary markets and reduce costs—a move original suppliers welcome to clear inventory. The overall market is fluctuating at high levels. Aside from slight price increases in specific specs driven by supply constraints or rebound adjustments in high-capacity products, most items remain stable as buyers and sellers continue their price tug-of-war.
+
+More
+
+Category
+
+DRAM (Index)
+NAND Flash
+TFT-LCD (Index)
+PV
+Li-Ion Battery
+About Us
+Research Report
+Tags
+Industry Insights
+Terms of Use
+Privacy Policy
+Membership Terms & Conditions
+Contact Us
+Subscribe to Industry Insights
+Subscribe
+English 
+© 2026 TrendForce Corp. All rights reserved
+
+Last Update 2026-10-12 14:40 (GMT+8)
+Item	Daily High	Daily Low	Session High	Session Low	Session Average	Session Change	History
+SLC 2Gb 256MBx8	4.60	4.25	4.60	4.25	4.413	▲ 1.38 %	
+SLC 1Gb 128MBx8	3.60	2.95	3.60	2.95	3.363	▼ -0.15 %	
+MLC 64Gb 8GBx8	55.00	38.50	55.00	38.50	42.337	▲ 0.59 %	
+MLC 32Gb 4GBx8	21.50	19.20	21.50	19.20	19.833	▲ 0.84 %	
+Last Update 2026-08-31 18:00 (GMT+8)
+Item	High	Low	Average	Average Change	Low Change	History
+NAND 128Gb 16Gx8 MLC	30.60	30.25	30.475	▲ 1.42 %	▲ 2.20 %	
+NAND 64Gb 8Gx8 MLC	23.55	23.20	23.425	▲ 1.36 %	▲ 1.75 %	
+NAND 32Gb 4Gx8 MLC	18.35	17.90	18.128	▲ 1.47 %	▲ 1.99 %	
+Last Update 2026-10-12 14:40 (GMT+8)
+Item	Weekly High	Weekly Low	Session High	Session Low	Session Average	Session Change	History
+512Gb TLC	21.00	16.80	21.00	16.80	18.833	— 0.00 %	
+256Gb TLC	20.00	16.80	20.00	16.80	18.365	— 0.00 %	
+128Gb TLC	15.00	8.00	15.00	8.00	9.967	— 0.00 %	
+Last Update 2026-10-12 14:40 (GMT+8)
+Item	Daily High	Daily Low	Session High	Session Low	Session Average	Session Change	History
+MicroSD 16GB	3.20	2.85	3.20	2.85	2.95	▼ -0.51 %	
+MicroSD 32GB	4.80	3.80	4.80	3.80	4.15	— 0.00 %	
+MicroSD 64GB	7.00	6.00	7.00	6.00	6.40	— 0.00 %	
+MicroSD 128GB	13.00	11.70	13.00	11.70	12.19	▼ -0.81 %	
+Last Update 2026-08-05 11:00 (GMT+8)
+Item	High	Low	Average
+1TB-mSATA/M.2 TLC PCIe-Value Grade	385.00	265.00	321.00
+512GB-mSATA/M.2 TLC PCIe-Value Grade	210.00	165.00	201.13
+256GB-mSATA/M.2 TLC PCIe-Value Grade	160.00	110.00	128.38
+3Q26 PC-Client OEM SSD Contract Price updated on 8/5/2026, click here for details.
+Last Update 2026-10-16 10:30 (GMT+8)
+Brand	Interface	Series	Capacity	High	Low	Average	Change
+ADATA	SATA 6.0 Gb/s	Ultimate SU650	960 GB	174.46	172.95	173.71	▼ -2.94 %
+Kimtigo	PCIe 4.0	TP5000	1 TB	150.30	115.70	133.00	— 0.00 %
+Samsung	PCIe 4.0 X4	990 Pro	1 TB	259.99	239.99	249.99	▲ 4.17 %
+PNY	PCIe 5.0 X4	CS2150	2 TB	370.00	370.00	370.00	▼ -2.63 %
+Silicon Power	PCIe 4.0 X4	US75	1 TB	186.97	186.97	186.97	▼ -1.58 %
+TLC 1Tb	TLC 512Gb	TLC 256Gb
+QLC 1Tb		
+Sep. NAND Flash Wafer Contract Price updated on 9/30/2026, click here for details.
+eMMC 128GB	eMMC 64GB	eMMC 32GB
+eMMC 16GB	eMMC 8GB	eMMC 4GB
+eMMC 16GB MLC	eMMC 64GB TLC	UFS 256GB
+eMMC 8GB MLC	eMMC 32GB TLC	UFS 128GB
+3Q26 eMMC contract price updated on 8/4/2026, click here for details.

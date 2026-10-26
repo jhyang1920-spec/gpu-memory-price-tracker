@@ -1,8 +1,623 @@
-getdeploying.com
-Performing security verification
+GetDeploying
+Cloud Providers
+GPUs
+VPS
+Object Storage
+Egress
+LLMs
+Compare
+Search
+Ctrl K
+Feedback
+Salad
+60,000+ GPUs·From $0.02/hr·Inference at scale
+Our sponsor
+View Pricing →
+Cloud GPU pricing
 
-This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot.
+Compare 3,977 GPU prices across 85 cloud providers.
 
-Ray ID: a505c28b0bfd1697
-Performance and Security by Cloudflare
-Privacy
+GPU price trend
++21%
+Last 12 months · 21 models
+Cheapest H100
+$1.79
+/GPU/hr
+Lium · on-demand
+GPU models
+108
+3,977 configs tracked
+Providers
+85
+Updated 6 minutes ago
+GPU models
+How this list is ordered
+Sort by
+Most popular
+Cheapest listing
+Cheapest median
+Most providers
+Most memory
+Name (A-Z)
+Any memory
+108
+24 GB+
+48
+48 GB+
+29
+80 GB+
+21
+141 GB+
+11
+All tiers
+108
+Datacenter
+39
+Workstation
+31
+Consumer
+38
+Cloud GPU models with memory, architecture, cheapest on-demand price and median price per GPU per hour, and the providers listing each
+GPU	Memory · Arch	Cheapest on-demand	Median on-demand	Providers
+
+Nvidia B300
+Released 2025
+	
+288 GB
+HBM3e
+Blackwell Ultra
+	
+$6.50
+/GPU/hr
+Bentaus
+	
+$9.33
+/GPU/hr
+	
++32 providers
+
+
+Nvidia H100
+Released 2022
+	
+80 GB
+HBM3
+Hopper
+	
+$1.79
+/GPU/hr
+Lium
+	
+$3.85
+/GPU/hr
+	
++52 providers
+
+
+Nvidia B200
+Released 2024
+	
+180 GB
+HBM3e
+Blackwell
+	
+$3.75
+/GPU/hr
+Packet·ai
+	
+$7.99
+/GPU/hr
+	
++33 providers
+
+
+Nvidia RTX PRO 6000
+Released 2025
+	
+96 GB
+GDDR7
+Blackwell
+	
+$0.65
+/GPU/hr
+Hostinger
+	
+$2.31
+/GPU/hr
+	
++48 providers
+
+
+Nvidia RTX 5090
+Released 2025
+	
+32 GB
+GDDR7
+Blackwell
+	
+$0.35
+/GPU/hr
+HyperAI
+	
+$0.83
+/GPU/hr
+	
++15 providers
+
+
+Nvidia H200
+Released 2023
+	
+141 GB
+HBM3e
+Hopper
+	
+$2.09
+/GPU/hr
+Beam
+	
+$4.78
+/GPU/hr
+	
++45 providers
+
+
+Nvidia A100
+Released 2020
+	
+80 GB
+HBM2e
+Ampere
+	
+$0.89
+/GPU/hr
+Packet·ai
+	
+$1.88
+/GPU/hr
+	
++41 providers
+
+
+Nvidia RTX 4090
+Released 2022
+	
+24 GB
+GDDR6X
+Ada Lovelace
+	
+$0.33
+/GPU/hr
+Novita
+	
+$0.45
+/GPU/hr
+	
++12 providers
+
+
+Nvidia GB200
+Released 2024
+	
+186 GB
+HBM3e
+Grace Blackwell
+	
+$10.50
+/GPU/hr
+CoreWeave
+	
+$16.00
+/GPU/hr
+	
++5 providers
+
+
+Nvidia GB300
+Released 2025
+	
+288 GB
+HBM3e
+Grace Blackwell Ultra
+	
+$18.00
+/GPU/hr
+Oracle Cloud
+	
+$18.00
+/GPU/hr
+	
++4 providers
+
+
+AMD MI355X
+Released 2025
+	
+288 GB
+HBM3e
+CDNA 4
+	
+$5.99
+/GPU/hr
+Daytona
+	
+$8.32
+/GPU/hr
+	
++1 provider
+
+
+AMD MI300X
+Released 2023
+	
+192 GB
+HBM3
+CDNA 3
+	
+$2.59
+/GPU/hr
+DigitalOcean
+	
+$2.99
+/GPU/hr
+	
++6 providers
+
+
+Nvidia RTX 3090
+Released 2020
+	
+24 GB
+GDDR6X
+Ampere
+	
+$0.10
+/GPU/hr
+HyperAI
+	
+$0.31
+/GPU/hr
+	
++3 providers
+
+
+Nvidia L40S
+Released 2023
+	
+48 GB
+GDDR6
+Ada Lovelace
+	
+$0.55
+/GPU/hr
+Novita
+	
+$1.64
+/GPU/hr
+	
++32 providers
+
+
+Nvidia V100
+Released 2017
+	
+32 GB
+HBM2
+Volta
+	
+$0.14
+/GPU/hr
+HyperAI
+	
+$1.35
+/GPU/hr
+	
++14 providers
+
+
+Nvidia RTX 6000 Ada
+Released 2022
+	
+48 GB
+GDDR6
+Ada Lovelace
+	
+$0.65
+/GPU/hr
+GPU.ai
+	
+$1.07
+/GPU/hr
+	
++8 providers
+
+
+AMD MI325X
+Released 2024
+	
+256 GB
+HBM3e
+CDNA 3
+	
+$2.25
+/GPU/hr
+Bentaus
+	
+$3.09
+/GPU/hr
+	
+5 providers
+
+
+Nvidia RTX A6000
+Released 2020
+	
+48 GB
+GDDR6
+Ampere
+	
+$0.35
+/GPU/hr
+Thunder Compute
+	
+$0.59
+/GPU/hr
+	
++16 providers
+
+
+Nvidia L4
+Released 2023
+	
+24 GB
+GDDR6
+Ada Lovelace
+	
+$0.43
+/GPU/hr
+Leaseweb
+	
+$0.88
+/GPU/hr
+	
++14 providers
+
+
+Nvidia RTX PRO 5000
+Released 2025
+	
+48 GB
+GDDR7
+Blackwell
+	
+--
+	
+$0.84
+/GPU/hr
+	
+3 providers
+Show all 108 GPUs
+
+Showing 20 of 108 GPU models
+
+Heads up: These are medians across providers, not a rate you can book: the cheapest listing sits below them, and a provider's own page may quote a different figure, for example on tax, region or a promotion. Verify before provisioning. More on how we price.
+
+Salad
+Our sponsor
+Access 60,000+ daily active GPUs across 191 countries, from $0.02/hour
+Run RTX 50-series and 40-series cards without datacenter pricing
+Pick a priority level to balance cost against interruptions
+Per-second billing, with no charge for cold starts or image pulls
+View Pricing
+Common questions
+What is the cheapest cloud GPU?
+−
+
+The lowest listing we currently track is the Nvidia GTX 1650 at Salad, $0.020 per GPU per hour on-demand. For the cheapest GPU by VRAM requirement, class and current availability, see our cheapest cloud GPUs guide.
+
+Why is the cheapest price so far below the median?
++
+How often are these GPU prices updated?
++
+What does $/GPU/hr mean?
++
+What is the difference between on-demand, spot, and reserved GPU pricing?
++
+Which GPU is best for AI training vs inference?
++
+How much VRAM do I need?
++
+Nvidia vs AMD: which is better for AI?
++
+What is the difference between CUDA cores and tensor cores?
++
+Can I run AI workloads on a CPU instead?
++
+
+Open a GPU model to compare providers, or track the market on the GPU price trends.
+
+Back to top ↑
+GetDeploying
+
+Add your company
+
+Compare clouds
+
+Fal vs Replicate
+Fly.io vs Railway
+AWS vs Google Cloud
+AWS vs Hetzner
+DigitalOcean vs Hetzner
+Hostinger vs Vercel
+Railway vs Render
+Hetzner vs Hostinger
+Compare Providers
+
+Compare GPUs
+
+Nvidia B300 vs H200
+Nvidia L4 vs T4
+Nvidia A100 vs RTX PRO 6000
+Nvidia B200 vs B300
+Nvidia A10 vs L4
+Nvidia H100 vs RTX PRO 6000
+Nvidia B300 vs H100
+
+Compare LLMs
+
+Qwen3.8-27B
+Gemini 3.8 Flash
+GLM-5.3-Flash
+Claude Opus 5
+GPT-6 Astra
+Kimi K3
+Grok 4.5
+LLM Cost Calculator
+All LLM Prices
+
+Resources
+
+GPU Price Trends
+GPU Price Comparison
+Cloud Egress Costs
+Object Storage Costs
+VPS Price Comparison
+Datacenters in country
+Cloud providers HQs
+Cloud Compliance
+
+Guides
+
+How to run Gemma 4 locally
+LM Studio with OpenCode
+Local LLMs with LM Studio
+How to run Mistral locally
+Gemma 4 with OpenClaw
+Secure an Ubuntu Server
+Cheapest Cloud GPUs
+GPU Value Map
+All Guides
+
+Company
+
+Methodology
+Open Datasets
+GPU Prices API
+Terms and Conditions
+Privacy Policy
+Legal Notice
+Contact
+
+All third-party names, logos and trademarks belong to their respective owners. They are used for identification purposes only, not to suggest a partnership or endorsement. *Redis is a registered trademark of Redis Ltd. Any rights therein are reserved to Redis Ltd.
+
+© 2026 GetDeploying.com
+
+GPU	Memory · Arch	Cheapest on-demand	Median on-demand	Providers
+Nvidia B300 Released 2025	288 GB HBM3e Blackwell Ultra	$6.50 /GPU/hr Bentaus	$9.33 /GPU/hr	+32 providers
+Nvidia H100 Released 2022	80 GB HBM3 Hopper	$1.79 /GPU/hr Lium	$3.85 /GPU/hr	+52 providers
+Nvidia B200 Released 2024	180 GB HBM3e Blackwell	$3.75 /GPU/hr Packet·ai	$7.99 /GPU/hr	+33 providers
+Nvidia RTX PRO 6000 Released 2025	96 GB GDDR7 Blackwell	$0.65 /GPU/hr Hostinger	$2.31 /GPU/hr	+48 providers
+Nvidia RTX 5090 Released 2025	32 GB GDDR7 Blackwell	$0.35 /GPU/hr HyperAI	$0.83 /GPU/hr	+15 providers
+Nvidia H200 Released 2023	141 GB HBM3e Hopper	$2.09 /GPU/hr Beam	$4.78 /GPU/hr	+45 providers
+Nvidia A100 Released 2020	80 GB HBM2e Ampere	$0.89 /GPU/hr Packet·ai	$1.88 /GPU/hr	+41 providers
+Nvidia RTX 4090 Released 2022	24 GB GDDR6X Ada Lovelace	$0.33 /GPU/hr Novita	$0.45 /GPU/hr	+12 providers
+Nvidia GB200 Released 2024	186 GB HBM3e Grace Blackwell	$10.50 /GPU/hr CoreWeave	$16.00 /GPU/hr	+5 providers
+Nvidia GB300 Released 2025	288 GB HBM3e Grace Blackwell Ultra	$18.00 /GPU/hr Oracle Cloud	$18.00 /GPU/hr	+4 providers
+AMD MI355X Released 2025	288 GB HBM3e CDNA 4	$5.99 /GPU/hr Daytona	$8.32 /GPU/hr	+1 provider
+AMD MI300X Released 2023	192 GB HBM3 CDNA 3	$2.59 /GPU/hr DigitalOcean	$2.99 /GPU/hr	+6 providers
+Nvidia RTX 3090 Released 2020	24 GB GDDR6X Ampere	$0.10 /GPU/hr HyperAI	$0.31 /GPU/hr	+3 providers
+Nvidia L40S Released 2023	48 GB GDDR6 Ada Lovelace	$0.55 /GPU/hr Novita	$1.64 /GPU/hr	+32 providers
+Nvidia V100 Released 2017	32 GB HBM2 Volta	$0.14 /GPU/hr HyperAI	$1.35 /GPU/hr	+14 providers
+Nvidia RTX 6000 Ada Released 2022	48 GB GDDR6 Ada Lovelace	$0.65 /GPU/hr GPU.ai	$1.07 /GPU/hr	+8 providers
+AMD MI325X Released 2024	256 GB HBM3e CDNA 3	$2.25 /GPU/hr Bentaus	$3.09 /GPU/hr	5 providers
+Nvidia RTX A6000 Released 2020	48 GB GDDR6 Ampere	$0.35 /GPU/hr Thunder Compute	$0.59 /GPU/hr	+16 providers
+Nvidia L4 Released 2023	24 GB GDDR6 Ada Lovelace	$0.43 /GPU/hr Leaseweb	$0.88 /GPU/hr	+14 providers
+Nvidia RTX PRO 5000 Released 2025	48 GB GDDR7 Blackwell	--	$0.84 /GPU/hr	3 providers
+Nvidia GH200 Released 2023	96 GB HBM3 Grace Hopper	$2.29 /GPU/hr Lambda Labs	$2.98 /GPU/hr	+1 provider
+Nvidia RTX PRO 6000D Released 2025	84 GB GDDR7 Blackwell	$0.97 /GPU/hr GPUhub	$0.97 /GPU/hr	1 provider
+Nvidia RTX 5060 Ti Released 2025	16 GB GDDR7 Blackwell	$0.12 /GPU/hr Theta EdgeCloud	$0.13 /GPU/hr	2 providers
+Nvidia RTX 3060 Released 2021	12 GB GDDR6 Ampere	$0.07 /GPU/hr Theta EdgeCloud	$0.08 /GPU/hr	2 providers
+Nvidia RTX 5080 Released 2025	16 GB GDDR7 Blackwell	$0.26 /GPU/hr Salad	$0.33 /GPU/hr	4 providers
+AMD MI455X Released 2026	432 GB HBM4 CDNA 5	Custom Quoted on request	--	5 providers
+Nvidia T4 Released 2018	16 GB GDDR6 Turing	$0.20 /GPU/hr Theta EdgeCloud	$0.69 /GPU/hr	+5 providers
+Nvidia RTX 5070 Released 2025	12 GB GDDR7 Blackwell	$0.17 /GPU/hr Salad	$0.21 /GPU/hr	2 providers
+Nvidia RTX 5070 Ti Released 2025	16 GB GDDR7 Blackwell	$0.22 /GPU/hr Theta EdgeCloud	$0.23 /GPU/hr	3 providers
+Nvidia A40 Released 2020	48 GB GDDR6 Ampere	$0.59 /GPU/hr Runpod	$1.05 /GPU/hr	+2 providers
+Nvidia RTX 4070 Released 2023	12 GB GDDR6X Ada Lovelace	$0.14 /GPU/hr Theta EdgeCloud	$0.16 /GPU/hr	2 providers
+Nvidia A800 Released 2022	40 GB HBM2 Ampere	$1.18 /GPU/hr GPUhub	$1.18 /GPU/hr	1 provider
+Nvidia A10 Released 2021	24 GB GDDR6 Ampere	$1.00 /GPU/hr OVH	$1.55 /GPU/hr	+3 providers
+Nvidia RTX 3080 Released 2020	10 GB GDDR6X Ampere	$0.13 /GPU/hr Theta EdgeCloud	$0.17 /GPU/hr	3 providers
+Nvidia RTX 5060 Released 2025	8 GB GDDR7 Blackwell	$0.11 /GPU/hr Salad	$0.15 /GPU/hr	3 providers
+Nvidia RTX PRO 4500 Released 2025	32 GB GDDR7 Blackwell	$0.72 /GPU/hr Runpod	$1.16 /GPU/hr	4 providers
+Nvidia RTX 4060 Released 2023	8 GB GDDR6 Ada Lovelace	$0.08 /GPU/hr Salad	$0.11 /GPU/hr	3 providers
+AMD MI350X Released 2025	288 GB HBM3e CDNA 4	--	$3.61 /GPU/hr	1 provider
+Nvidia RTX PRO 4000 Released 2025	24 GB GDDR7 Blackwell	$0.57 /GPU/hr Runpod	$0.57 /GPU/hr	2 providers
+Nvidia RTX 4060 Ti Released 2023	16 GB GDDR6 Ada Lovelace	$0.10 /GPU/hr Theta EdgeCloud	$0.12 /GPU/hr	2 providers
+Nvidia L40 Released 2022	48 GB GDDR6 Ada Lovelace	$0.78 /GPU/hr GPU.ai	$1.06 /GPU/hr	+7 providers
+Nvidia RTX 3070 Released 2020	8 GB GDDR6 Ampere	$0.08 /GPU/hr Theta EdgeCloud	$0.10 /GPU/hr	3 providers
+Nvidia RTX 4080 Released 2022	16 GB GDDR6X Ada Lovelace	$0.23 /GPU/hr Salad	$0.27 /GPU/hr	5 providers
+AMD MI250 Released 2021	128 GB HBM2e CDNA2	--	$1.50 /GPU/hr	1 provider
+Nvidia RTX 4000 Ada Released 2023	20 GB GDDR6 Ada Lovelace	$0.28 /GPU/hr Runpod	$0.74 /GPU/hr	4 providers
+Nvidia RTX 3090 Ti Released 2022	24 GB GDDR6X Ampere	$0.19 /GPU/hr Salad	$0.19 /GPU/hr	2 providers
+Nvidia P100 Released 2016	16 GB HBM2 Pascal	$1.27 /GPU/hr Oracle Cloud	$1.51 /GPU/hr	5 providers
+Nvidia A4000 Released 2021	16 GB GDDR6 Ampere	$0.12 /GPU/hr Lium	$0.49 /GPU/hr	+7 providers
+Nvidia P4 Released 2016	8 GB GDDR5 Pascal	$0.65 /GPU/hr Google Cloud	$0.81 /GPU/hr	1 provider
+Intel Gaudi 2 Released 2022	96 GB HBM2e Gaudi (2nd Gen)	$1.03 /GPU/hr Cyfuture AI	$1.16 /GPU/hr	4 providers
+Nvidia A5000 Released 2021	24 GB GDDR6 Ampere	$0.16 /GPU/hr Runpod	$1.31 /GPU/hr	+5 providers
+Nvidia RTX 3060 Ti Released 2020	8 GB GDDR6 Ampere	$0.07 /GPU/hr Theta EdgeCloud	$0.10 /GPU/hr	3 providers
+Nvidia RTX 3080 Ti Released 2021	12 GB GDDR6X Ampere	$0.15 /GPU/hr Salad	$0.26 /GPU/hr	4 providers
+Nvidia RTX 3050 Released 2022	8 GB GDDR6 Ampere	$0.07 /GPU/hr Salad	$0.07 /GPU/hr	1 provider
+Nvidia Quadro RTX 6000 Released 2018	24 GB GDDR6 Turing	$1.50 /GPU/hr Akamai Cloud	$1.50 /GPU/hr	2 providers
+Nvidia RTX 5000 Ada Released 2023	32 GB GDDR6 Ada Lovelace	--	$0.49 /GPU/hr	1 provider
+Nvidia RTX A2000 Released 2021	12 GB GDDR6 Ampere	$0.11 /GPU/hr Theta EdgeCloud	$0.11 /GPU/hr	2 providers
+Nvidia RTX 5000 Released 2018	16 GB GDDR6 Turing	$0.60 /GPU/hr OVH	$0.71 /GPU/hr	2 providers
+Nvidia GTX 1060 Released 2016	6 GB GDDR5 Pascal	$0.03 /GPU/hr Salad	$0.03 /GPU/hr	1 provider
+Nvidia GTX 1050 Ti Released 2016	4 GB GDDR5 Pascal	$0.02 /GPU/hr Salad	$0.02 /GPU/hr	1 provider
+Nvidia A10G Released 2021	24 GB GDDR6 Ampere	$1.00 /GPU/hr Hugging Face	$1.60 /GPU/hr	2 providers
+Nvidia RTX 4070 Ti Super Released 2024	16 GB GDDR6X Ada Lovelace	$0.21 /GPU/hr Salad	$0.22 /GPU/hr	2 providers
+Nvidia RTX 4070 Ti Released 2023	12 GB GDDR6X Ada Lovelace	$0.20 /GPU/hr Salad	$0.20 /GPU/hr	2 providers
+Nvidia GTX 1080 Ti Released 2017	11 GB GDDR5X Pascal	$0.04 /GPU/hr Salad	$0.04 /GPU/hr	1 provider
+Nvidia A30 Released 2021	24 GB HBM2 Ampere	$0.41 /GPU/hr Jarvislabs	$0.68 /GPU/hr	+3 providers
+Nvidia GTX 1650 Released 2019	4 GB GDDR5 Turing	$0.02 /GPU/hr Salad	$0.02 /GPU/hr	2 providers
+Nvidia GTX 1070 Released 2016	8 GB GDDR5 Pascal	$0.04 /GPU/hr Salad	$0.04 /GPU/hr	1 provider
+Nvidia RTX 2060 Released 2019	6 GB GDDR6 Turing	$0.05 /GPU/hr Salad	$0.05 /GPU/hr	2 providers
+AMD MI210 Released 2022	64 GB HBM2e CDNA2	--	$0.93 /GPU/hr	1 provider
+Nvidia A4500 Released 2021	20 GB GDDR6 Ampere	$0.19 /GPU/hr Runpod	$0.19 /GPU/hr	1 provider
+Nvidia GTX 1660 Super Released 2019	6 GB GDDR6 Turing	$0.04 /GPU/hr Salad	$0.05 /GPU/hr	2 providers
+Nvidia GTX 1660 Released 2019	6 GB GDDR5 Turing	$0.04 /GPU/hr Salad	$0.04 /GPU/hr	2 providers
+Nvidia A16 Released 2021	16 GB GDDR6 Ampere	--	$0.56 /GPU/hr	1 provider
+Nvidia GTX 1080 Released 2016	8 GB GDDR5X Pascal	$0.04 /GPU/hr Salad	$0.04 /GPU/hr	1 provider
+Nvidia RTX PRO 2000 Released 2025	16 GB GDDR7 Blackwell	--	$0.23 /GPU/hr	1 provider
+Intel Gaudi 3 Released 2024	128 GB HBM2e Gaudi (3rd Gen)	Custom Quoted on request	--	1 provider
+Nvidia RTX 2070 Released 2018	8 GB GDDR6 Turing	$0.06 /GPU/hr Salad	$0.06 /GPU/hr	1 provider
+Nvidia RTX 2080 Ti Released 2018	11 GB GDDR6 Turing	$0.10 /GPU/hr Salad	$0.10 /GPU/hr	1 provider
+Nvidia T1000 Released 2021	4 GB GDDR6 Turing	--	$0.10 /GPU/hr	1 provider
+Nvidia RTX 3070 Ti Released 2021	8 GB GDDR6X Ampere	$0.10 /GPU/hr Salad	$0.10 /GPU/hr	2 providers
+AMD Radeon Pro V520 Released 2020	8 GB HBM2 RDNA	$0.38 /GPU/hr AWS	$0.87 /GPU/hr	1 provider
+Nvidia P6000 Released 2016	24 GB GDDR5X Pascal	$1.10 /GPU/hr Paperspace	$1.10 /GPU/hr	1 provider
+Nvidia V100S Released 2019	32 GB HBM2 Volta	$0.88 /GPU/hr OVH	$0.88 /GPU/hr	1 provider
+Nvidia T4G Released 2020	16 GB GDDR6 Turing	$0.42 /GPU/hr AWS	$1.10 /GPU/hr	1 provider
+Nvidia RTX 4000 SFF Ada Released 2023	20 GB GDDR6 Ada Lovelace	$0.42 /GPU/hr Hetzner	$0.46 /GPU/hr	3 providers
+Nvidia RTX 2000 Ada Released 2024	16 GB GDDR6 Ada Lovelace	$0.13 /GPU/hr Theta EdgeCloud	$0.19 /GPU/hr	2 providers
+Nvidia RTX 4000 Released 2018	8 GB GDDR6 Turing	$0.56 /GPU/hr Paperspace	$0.56 /GPU/hr	1 provider
+Nvidia K80 Released 2014	12 GB GDDR5 Kepler	$0.90 /GPU/hr AWS	$0.90 /GPU/hr	2 providers
+Nvidia P600 Released 2017	2 GB GDDR5 Pascal	--	$0.05 /GPU/hr	1 provider
+Nvidia RTX 2080 Released 2018	8 GB GDDR6 Turing	$0.08 /GPU/hr Salad	$0.08 /GPU/hr	1 provider
+Nvidia P5000 Released 2016	16 GB GDDR5X Pascal	$0.78 /GPU/hr Paperspace	$0.78 /GPU/hr	1 provider
+Nvidia M4000 Released 2015	8 GB GDDR5 Maxwell	$0.45 /GPU/hr Paperspace	$0.45 /GPU/hr	1 provider
+Nvidia P1000 Released 2017	4 GB GDDR5 Pascal	--	$0.10 /GPU/hr	1 provider
+Nvidia M60 Released 2015	8 GB GDDR5 Maxwell	$0.75 /GPU/hr AWS	$1.14 /GPU/hr	1 provider
+Nvidia P4000 Released 2017	8 GB GDDR5 Pascal	$0.51 /GPU/hr Paperspace	$0.51 /GPU/hr	1 provider
+Nvidia H20 No listings yet Released 2024	96 GB HBM3 Hopper	--	--	
+Nvidia H800 No listings yet Released 2023	80 GB HBM2e Hopper	--	--	
+Nvidia B100 No listings yet Released 2024	192 GB HBM3e Blackwell	--	--	
+Nvidia RTX 5880 Ada No listings yet Released 2024	48 GB GDDR6 Ada Lovelace	--	--	
+Nvidia P40 No listings yet Released 2016	24 GB GDDR5 Pascal	--	--	
+Nvidia GT 730 No listings yet Released 2014	2 GB DDR3 Kepler	--	--	
+Nvidia RTX 4500 Ada No listings yet Released 2023	24 GB GDDR6 Ada Lovelace	--	--	
+Nvidia GTX 1070 Ti No listings yet Released 2017	8 GB GDDR5 Pascal	--	--	
+Nvidia K620 No listings yet Released 2014	2 GB DDR3 Maxwell	--	--	
+Nvidia GT 710 No listings yet Released 2016	2 GB DDR3 Kepler	--	--	
+Nvidia RTX 2060 Super No listings yet Released 2019	8 GB GDDR6 Turing	--	--	
+Nvidia P620 No listings yet Released 2018	2 GB GDDR5 Pascal	--	--	
+Nvidia P2000 No listings yet Released 2017	5 GB GDDR5 Pascal	--	--	
