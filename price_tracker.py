@@ -17,7 +17,7 @@ GPU 임대가 · 메모리 가격 주간 수집기
 
 원칙:
   - 페이지에서 찾지 못한 값은 행을 만들지 않는다(추정·이월 없음). run_log.json의 missing에 남긴다.
-  - 같은 주에 다시 돌리면 그 주의 행만 교체된다.
+  - 같은 주에 다시 돌리면 그 주에 새로 가져온 품목의 행만 교체된다(못 가져온 품목은 기존 값 유지).
   - 값이 상식 범위를 벗어나면(파싱 오류 가능성) 버리고 missing에 남긴다.
 """
 
@@ -63,7 +63,7 @@ GPU_TARGETS = {
     ],
     LAMBDA: [
         ("B200", rf"NVIDIA B200 SXM\d?\s+180\s*GB[\s\S]{{0,120}}?\$\s*{NUM}", "one"),
-        ("H200", rf"NVIDIA H200 SXM\d?\s+141\s*GB[\s\S]{{0,120}}?\$\s*{NUM}", "one"),
+        ("H200?", rf"NVIDIA H200 SXM\d?\s+141\s*GB[\s\S]{{0,120}}?\$\s*{NUM}", "one"),  # 미공시가 정상 → missing에 안 남김
         ("H100", rf"NVIDIA H100 SXM\d?\s+80\s*GB[\s\S]{{0,120}}?\$\s*{NUM}", "one"),
         ("A100 80GB", rf"NVIDIA A100 SXM\d?\s+80\s*GB[\s\S]{{0,120}}?\$\s*{NUM}", "one"),
     ],
@@ -84,22 +84,23 @@ SOURCE_NAME = {GETDEPLOYING: "GetDeploying", LAMBDA: "Lambda", RUNPOD: "RunPod",
 GPU_RANGE = {"B200": (1.0, 40.0), "H200": (0.8, 30.0), "H100": (0.3, 25.0), "A100 80GB": (0.2, 15.0)}
 
 # 메모리: TrendForce
-TF_DRAM = "https://www.trendforce.com/price/dram/dram_spot"
-TF_FLASH = "https://www.trendforce.com/price/flash/flash_spot"
-MEM_TARGETS = {
-    TF_DRAM: [
+TF = "https://www.trendforce.com/price/"
+MEM_TARGETS = {  # TrendForce는 표마다 페이지가 따로 있다
+    TF + "dram/dram_spot": [
         ("DDR5 16Gb (2Gx8) 4800/5600", "DRAM 현물"),
         ("DDR4 16Gb (2Gx8) 3200", "DRAM 현물"),
-        ("DDR5 RDIMM 32GB 4800/5600", "모듈 현물"),
-        ("GDDR5 8Gb", "GDDR 현물"),
+    ],
+    TF + "dram/module_spot": [("DDR5 RDIMM 32GB 4800/5600", "모듈 현물")],
+    TF + "dram/gddr_spot": [("GDDR5 8Gb", "GDDR 현물")],
+    TF + "dram/dram_contract": [
         ("DDR5 8GB SO-DIMM", "DRAM 고정가"),
         ("DDR4 16GB SO-DIMM", "DRAM 고정가"),
     ],
-    TF_FLASH: [
+    TF + "flash/flash_spot": [
         ("SLC 2Gb 256MBx8", "NAND 현물"),
         ("MLC 64Gb 8GBx8", "NAND 현물"),
-        ("512Gb TLC", "웨이퍼 현물"),
     ],
+    TF + "flash/wafer_spot": [("512Gb TLC", "웨이퍼 현물")],
 }
 
 # ------------------------------------------------------------------ 파서 (텍스트 → 값)
@@ -113,9 +114,12 @@ def parse_gpu(url: str, text: str, week: str, missing: list) -> list:
     rows = []
     src = SOURCE_NAME[url]
     for gpu, pat, mode in GPU_TARGETS[url]:
+        optional = gpu.endswith("?")
+        gpu = gpu.rstrip("?")
         m = re.search(pat, text)
         if not m:
-            missing.append(f"{src} {gpu}")
+            if not optional:
+                missing.append(f"{src} {gpu}")
             continue
         lo, hi = GPU_RANGE[gpu]
         if mode == "gd":
@@ -177,30 +181,66 @@ def parse_memory(url: str, text: str, week: str, missing: list) -> list:
 # ------------------------------------------------------------------ 페이지 읽기
 
 
+# 숨겨진 탭 안의 표까지 문서 순서대로 읽는다: 표의 각 행은 칸을 탭으로 이어 한 줄로,
+# 'Last Update'가 적힌 말단 요소는 그 글자 그대로 한 줄로 낸다. (페이지 안 숨은 요소까지 포함)
+TABLES_JS = r"""
+() => {
+  const out = [];
+  const w = document.createTreeWalker(document.body, NodeFilter.SHOW_ELEMENT);
+  let n;
+  while ((n = w.nextNode())) {
+    if (n.tagName === 'TR') {
+      out.push([...n.children].map((c) => c.textContent.replace(/\s+/g, ' ').trim()).join('\t'));
+    } else if (!n.closest('tr') && n.children.length === 0 && /Last\s*Update/i.test(n.textContent)) {
+      // 날짜가 옆 요소에 따로 있으면 부모 글자까지 함께 낸다
+      const t = /\d{4}[-/.]\d{1,2}[-/.]\d{1,2}/.test(n.textContent) ? n.textContent : n.parentElement.textContent;
+      out.push(t.replace(/\s+/g, ' ').trim());
+    }
+  }
+  return out.join('\n');
+}
+"""
+
+CHALLENGE = re.compile(r"Performing security verification|Just a moment|Verifying you are human|Checking your browser", re.I)
+
+
 def fetch_texts(urls: list[str]) -> tuple[dict, dict]:
     from playwright.sync_api import sync_playwright
 
     texts, errors = {}, {}
     with sync_playwright() as p:
-        browser = p.chromium.launch()
+        # 화면 있는 브라우저(Actions에서는 xvfb 가상 화면)가 Cloudflare 확인을 더 잘 통과한다
+        browser = p.chromium.launch(headless=False, args=["--disable-blink-features=AutomationControlled"])
         ctx = browser.new_context(
             user_agent=("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-                        "(KHTML, like Gecko) Chrome/128.0 Safari/537.36"),
-            locale="en-US", viewport={"width": 1440, "height": 2400})
+                        "(KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"),
+            locale="en-US", timezone_id="America/New_York", viewport={"width": 1440, "height": 2400})
+        ctx.add_init_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
         for url in urls:
             page = ctx.new_page()
             try:
                 page.goto(url, wait_until="domcontentloaded", timeout=60000)
+                # Cloudflare 확인 화면이면 최대 45초 기다린다
+                for _ in range(15):
+                    if not CHALLENGE.search(page.inner_text("body")[:2000]):
+                        break
+                    page.wait_for_timeout(3000)
                 try:
                     page.wait_for_load_state("networkidle", timeout=20000)
                 except Exception:
                     pass
                 page.wait_for_timeout(3000)
-                # 지연 로딩 대비 끝까지 스크롤
-                for _ in range(8):
+                for _ in range(8):  # 지연 로딩 대비 끝까지 스크롤
                     page.mouse.wheel(0, 3000)
                     page.wait_for_timeout(400)
-                texts[url] = page.inner_text("body")
+                body = page.inner_text("body")
+                if CHALLENGE.search(body[:2000]):
+                    errors[url] = "Cloudflare 봇 확인 화면을 통과하지 못함"
+                try:  # 화면 텍스트 + 표 구조 텍스트(숨은 요소 포함)를 함께 둔다
+                    body = body + "\n\n" + page.evaluate(TABLES_JS)
+                except Exception:
+                    pass
+                texts[url] = body
             except Exception as e:  # noqa: BLE001
                 errors[url] = f"{type(e).__name__}: {e}"[:300]
             finally:
@@ -212,12 +252,16 @@ def fetch_texts(urls: list[str]) -> tuple[dict, dict]:
 # ------------------------------------------------------------------ 저장
 
 
-def merge(path: Path, new_rows: list, week: str) -> int:
+def merge(path: Path, new_rows: list, keys: tuple) -> int:
+    """같은 키(주 + 품목)의 행만 새 값으로 바꾼다. 이번 실행에서 못 가져온 품목은 기존 행을 그대로 둔다."""
     old = json.loads(path.read_text(encoding="utf-8")) if path.exists() else []
     if not new_rows:
         return 0
-    kept = [r for r in old if r.get("week") != week]
-    path.write_text(json.dumps(kept + new_rows, ensure_ascii=False, indent=0), encoding="utf-8")
+    k = lambda r: tuple(r.get(x) for x in keys)  # noqa: E731
+    fresh = {k(r) for r in new_rows}
+    kept = [r for r in old if k(r) not in fresh]
+    rows = sorted(kept + new_rows, key=lambda r: r.get("week", ""))
+    path.write_text(json.dumps(rows, ensure_ascii=False, indent=0), encoding="utf-8")
     return len(new_rows)
 
 
@@ -253,8 +297,8 @@ def main() -> int:
         else:
             missing.append(f"TrendForce 페이지 전체 ({u})")
 
-    n_gpu = merge(out / "gpu_prices.json", gpu_rows, week)
-    n_mem = merge(out / "memory_prices.json", mem_rows, week)
+    n_gpu = merge(out / "gpu_prices.json", gpu_rows, ("week", "gpu", "source", "kind"))
+    n_mem = merge(out / "memory_prices.json", mem_rows, ("week", "item"))
     log = {"run_at": now.isoformat(timespec="seconds"), "week": week,
            "gpu_rows": n_gpu, "memory_rows": n_mem, "missing": missing, "page_errors": errors}
     (out / "run_log.json").write_text(json.dumps(log, ensure_ascii=False, indent=1), encoding="utf-8")
