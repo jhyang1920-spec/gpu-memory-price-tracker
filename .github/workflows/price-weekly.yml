@@ -26,12 +26,13 @@ jobs:
         run: |
           pip install playwright==1.47.0
           python -m playwright install --with-deps chromium
+          sudo apt-get install -y xvfb
       - name: Collect
         run: |
           if [ "${{ github.event.inputs.dump_text }}" = "true" ]; then
-            python price_tracker.py --out-dir price_data --dump-text
+            xvfb-run -a python price_tracker.py --out-dir price_data --dump-text
           else
-            python price_tracker.py --out-dir price_data
+            xvfb-run -a python price_tracker.py --out-dir price_data
           fi
       - name: Commit results
         if: always()
