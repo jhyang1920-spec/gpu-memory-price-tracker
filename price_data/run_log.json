@@ -1,16 +1,9 @@
 {
- "run_at": "2026-10-27T05:00:05+09:00",
+ "run_at": "2026-10-27T09:29:13+09:00",
  "week": "2026-10-26",
- "gpu_rows": 11,
+ "gpu_rows": 31,
  "memory_rows": 9,
- "history_rows_today": 20,
- "missing": [
-  "GetDeploying H100",
-  "GetDeploying H200",
-  "GetDeploying B200",
-  "GetDeploying A100 80GB"
- ],
- "page_errors": {
-  "https://getdeploying.com/reference/cloud-gpu": "Cloudflare 봇 확인 화면을 통과하지 못함"
- }
+ "history_rows_today": 40,
+ "missing": [],
+ "page_errors": {}
 }
