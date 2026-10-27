@@ -7,7 +7,7 @@ GPU 임대가 · 메모리 가격 수집기 (매일 실행)
     메모리(TrendForce): 표의 Last Update 날짜(대만 GMT+8 표기 그대로).
     GPU (모두 미국 동부시각 기준):
       RunPod        페이지의 "Updated <날짜>"
-      GetDeploying  "Updated N minutes ago" → 수집 시각에서 N분을 뺀 날짜
+      GetDeploying  (현재 수집 중단 — 시장값 없음)
       Lambda·CoreWeave  날짜 표시가 없어 수집 날짜. price_changed로 가격이 바뀐 날을 표시한다.
 - 값은 price_history.csv 한 파일에 날짜별로 쌓인다. 원자료가 갱신되지 않으면 같은 날짜 행이
   다시 쓰일 뿐 새 행이 생기지 않는다(매일 돌려도 중복 없음).
@@ -72,12 +72,14 @@ def cw(name: str) -> str:
 
 
 GPU_TARGETS = {
-    GETDEPLOYING: [
-        ("H100", gd(r"H100"), "gd"),
-        ("H200", gd(r"H200"), "gd"),
-        ("B200", gd(r"B200"), "gd"),
-        ("A100 80GB", gd(r"A100(?=\s+Released\s+\d{4}\s+80\s*GB)"), "gd"),
-    ],
+    # GetDeploying 시장값은 가격 페이지(Cloudflare 봇 확인) 대신 공식 공개 데이터셋(fetch_gd_dataset)에서 받는다.
+    # 아래 페이지 수집 블록은 사용하지 않는다.
+    # GETDEPLOYING: [
+    #     ("H100", gd(r"H100"), "gd"),
+    #     ("H200", gd(r"H200"), "gd"),
+    #     ("B200", gd(r"B200"), "gd"),
+    #     ("A100 80GB", gd(r"A100(?=\s+Released\s+\d{4}\s+80\s*GB)"), "gd"),
+    # ],
     LAMBDA: [
         ("B200", rf"NVIDIA B200 SXM\d?\s+180\s*GB[\s\S]{{0,120}}?\$\s*{NUM}", "one"),
         ("H200?", rf"NVIDIA H200 SXM\d?\s+141\s*GB[\s\S]{{0,120}}?\$\s*{NUM}", "one"),  # 미공시가 정상 → missing에 안 남김
@@ -300,6 +302,52 @@ def fetch_texts(urls: list[str]) -> tuple[dict, dict]:
     return texts, errors
 
 
+# ------------------------------------------------------------------ GetDeploying 공식 데이터셋 (CC BY 4.0)
+# 가격 페이지 대신 GetDeploying이 공개한 주간 데이터셋을 받는다.
+# 출처 표기: GetDeploying, GPU rental price history, https://getdeploying.com/gpus, CC BY 4.0
+GD_DATASET = "https://getdeploying.com/dataset/gpu-prices/weekly.csv"
+GD_SLUGS = {  # 데이터셋 gpu_slug → 대시보드 GPU 이름 (A100은 슬러그 미확인: 후보 중 있는 것을 쓴다)
+    "nvidia-h100": "H100", "nvidia-h200": "H200", "nvidia-b200": "B200",
+    "nvidia-a100-80gb": "A100 80GB", "nvidia-a100": "A100 80GB",
+}
+GD_WEEKS = 3  # 최근 몇 주를 반영할지 (마지막 주는 진행 중이라 매일 바뀜)
+
+
+def fetch_gd_dataset(timeout: int = 60) -> str:
+    import urllib.request
+    req = urllib.request.Request(GD_DATASET, headers={"User-Agent": "gpu-memory-price-tracker (CC BY 4.0 dataset)"})
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        return r.read().decode("utf-8-sig")
+
+
+def parse_gd_dataset(text: str, missing: list) -> list:
+    """ON_DEMAND·예약 없음 행에서 median_price → market_median, min_price → market_low."""
+    rows_in = [r for r in csv.DictReader(text.splitlines())
+               if r.get("billing_type") == "ON_DEMAND" and not (r.get("reservation_months") or "").strip()]
+    dates = sorted({r["date"] for r in rows_in})[-GD_WEEKS:]
+    out, found = [], set()
+    for r in rows_in:
+        gpu = GD_SLUGS.get(r["gpu_slug"])
+        if not gpu or r["date"] not in dates or (gpu in found and r["gpu_slug"] == "nvidia-a100"):
+            continue
+        lo, hi = GPU_RANGE[gpu]
+        for kind, col in (("market_low", "min_price"), ("market_median", "median_price")):
+            try:
+                price = round(float(r[col]), 4)
+            except (KeyError, ValueError):
+                continue
+            if lo <= price <= hi:
+                out.append({"week": monday(r["date"]), "gpu": gpu, "source": "GetDeploying", "kind": kind,
+                            "price": price, "source_date": r["date"], "date_basis": "dataset_weekly"})
+            else:
+                missing.append(f"GetDeploying {gpu} {kind} (범위 밖 값 {price})")
+        found.add(gpu)
+    for gpu in ("H100", "H200", "B200", "A100 80GB"):
+        if gpu not in found:
+            missing.append(f"GetDeploying {gpu} (데이터셋에 없음)")
+    return out
+
+
 # ------------------------------------------------------------------ 저장
 
 
@@ -425,6 +473,12 @@ def main() -> int:
             mem_rows += parse_memory(u, texts[u], week, missing)
         else:
             missing.append(f"TrendForce 페이지 전체 ({u})")
+
+    try:
+        gpu_rows += parse_gd_dataset(fetch_gd_dataset(), missing)
+    except Exception as e:  # noqa: BLE001
+        errors["GetDeploying 데이터셋"] = f"{type(e).__name__}: {e}"[:300]
+        missing.append("GetDeploying 데이터셋 전체")
 
     n_gpu = merge(out / "gpu_prices.json", gpu_rows, ("week", "gpu", "source", "kind"))
     n_mem = merge(out / "memory_prices.json", mem_rows, ("week", "item"))
