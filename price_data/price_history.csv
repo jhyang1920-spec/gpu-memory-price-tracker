@@ -1,34 +1,34 @@
 ﻿date,week,group,item,category,source,kind,price,change_pct,source_date,unit,collected_at,date_basis,price_changed
-2026-08-31,2026-08-31,Memory,DDR4 16GB SO-DIMM,DRAM 고정가,TrendForce,contract,270.0,1.89,2026-08-31,USD,2026-10-29T05:08:26+09:00,page_last_update,first
-2026-08-31,2026-08-31,Memory,DDR5 8GB SO-DIMM,DRAM 고정가,TrendForce,contract,133.0,2.31,2026-08-31,USD,2026-10-29T05:08:26+09:00,page_last_update,first
-2026-10-08,2026-10-05,GPU,A100 80GB,GPU 임대가,RunPod,list,1.79,,2026-10-08,USD/GPU-hr,2026-10-29T05:08:26+09:00,page_updated,first
-2026-10-08,2026-10-05,GPU,B200,GPU 임대가,RunPod,list,7.99,,2026-10-08,USD/GPU-hr,2026-10-29T05:08:26+09:00,page_updated,first
-2026-10-08,2026-10-05,GPU,H100,GPU 임대가,RunPod,list,3.99,,2026-10-08,USD/GPU-hr,2026-10-29T05:08:26+09:00,page_updated,first
-2026-10-08,2026-10-05,GPU,H200,GPU 임대가,RunPod,list,5.29,,2026-10-08,USD/GPU-hr,2026-10-29T05:08:26+09:00,page_updated,first
-2026-10-12,2026-10-12,GPU,A100 80GB,GPU 임대가,GetDeploying,market_low,0.89,,2026-10-12,USD/GPU-hr,2026-10-29T05:08:26+09:00,dataset_weekly,first
-2026-10-12,2026-10-12,GPU,A100 80GB,GPU 임대가,GetDeploying,market_median,1.8038,,2026-10-12,USD/GPU-hr,2026-10-29T05:08:26+09:00,dataset_weekly,first
-2026-10-12,2026-10-12,GPU,B200,GPU 임대가,GetDeploying,market_low,3.75,,2026-10-12,USD/GPU-hr,2026-10-29T05:08:26+09:00,dataset_weekly,first
-2026-10-12,2026-10-12,GPU,B200,GPU 임대가,GetDeploying,market_median,7.95,,2026-10-12,USD/GPU-hr,2026-10-29T05:08:26+09:00,dataset_weekly,first
-2026-10-12,2026-10-12,GPU,H100,GPU 임대가,GetDeploying,market_low,1.71,,2026-10-12,USD/GPU-hr,2026-10-29T05:08:26+09:00,dataset_weekly,first
-2026-10-12,2026-10-12,GPU,H100,GPU 임대가,GetDeploying,market_median,3.8,,2026-10-12,USD/GPU-hr,2026-10-29T05:08:26+09:00,dataset_weekly,first
-2026-10-12,2026-10-12,GPU,H200,GPU 임대가,GetDeploying,market_low,2.09,,2026-10-12,USD/GPU-hr,2026-10-29T05:08:26+09:00,dataset_weekly,first
-2026-10-12,2026-10-12,GPU,H200,GPU 임대가,GetDeploying,market_median,4.875,,2026-10-12,USD/GPU-hr,2026-10-29T05:08:26+09:00,dataset_weekly,first
+2026-08-31,2026-08-31,Memory,DDR4 16GB SO-DIMM,DRAM 고정가,TrendForce,contract,270.0,1.89,2026-08-31,USD,2026-10-30T05:09:40+09:00,page_last_update,first
+2026-08-31,2026-08-31,Memory,DDR5 8GB SO-DIMM,DRAM 고정가,TrendForce,contract,133.0,2.31,2026-08-31,USD,2026-10-30T05:09:40+09:00,page_last_update,first
+2026-10-08,2026-10-05,GPU,A100 80GB,GPU 임대가,RunPod,list,1.79,,2026-10-08,USD/GPU-hr,2026-10-30T05:09:40+09:00,page_updated,first
+2026-10-08,2026-10-05,GPU,B200,GPU 임대가,RunPod,list,7.99,,2026-10-08,USD/GPU-hr,2026-10-30T05:09:40+09:00,page_updated,first
+2026-10-08,2026-10-05,GPU,H100,GPU 임대가,RunPod,list,3.99,,2026-10-08,USD/GPU-hr,2026-10-30T05:09:40+09:00,page_updated,first
+2026-10-08,2026-10-05,GPU,H200,GPU 임대가,RunPod,list,5.29,,2026-10-08,USD/GPU-hr,2026-10-30T05:09:40+09:00,page_updated,first
+2026-10-12,2026-10-12,GPU,A100 80GB,GPU 임대가,GetDeploying,market_low,0.89,,2026-10-12,USD/GPU-hr,2026-10-30T05:09:40+09:00,dataset_weekly,first
+2026-10-12,2026-10-12,GPU,A100 80GB,GPU 임대가,GetDeploying,market_median,1.8038,,2026-10-12,USD/GPU-hr,2026-10-30T05:09:40+09:00,dataset_weekly,first
+2026-10-12,2026-10-12,GPU,B200,GPU 임대가,GetDeploying,market_low,3.75,,2026-10-12,USD/GPU-hr,2026-10-30T05:09:40+09:00,dataset_weekly,first
+2026-10-12,2026-10-12,GPU,B200,GPU 임대가,GetDeploying,market_median,7.95,,2026-10-12,USD/GPU-hr,2026-10-30T05:09:40+09:00,dataset_weekly,first
+2026-10-12,2026-10-12,GPU,H100,GPU 임대가,GetDeploying,market_low,1.71,,2026-10-12,USD/GPU-hr,2026-10-30T05:09:40+09:00,dataset_weekly,first
+2026-10-12,2026-10-12,GPU,H100,GPU 임대가,GetDeploying,market_median,3.8,,2026-10-12,USD/GPU-hr,2026-10-30T05:09:40+09:00,dataset_weekly,first
+2026-10-12,2026-10-12,GPU,H200,GPU 임대가,GetDeploying,market_low,2.09,,2026-10-12,USD/GPU-hr,2026-10-30T05:09:40+09:00,dataset_weekly,first
+2026-10-12,2026-10-12,GPU,H200,GPU 임대가,GetDeploying,market_median,4.875,,2026-10-12,USD/GPU-hr,2026-10-30T05:09:40+09:00,dataset_weekly,first
 2026-10-12,2026-10-12,Memory,GDDR5 8Gb,GDDR 현물,TrendForce,spot,12.291,0.38,2026-10-12,USD,2026-10-26,page_last_update,first
 2026-10-12,2026-10-12,Memory,MLC 64Gb 8GBx8,NAND 현물,TrendForce,spot,42.337,0.59,2026-10-12,USD,2026-10-26,page_last_update,first
 2026-10-12,2026-10-12,Memory,SLC 2Gb 256MBx8,NAND 현물,TrendForce,spot,4.413,1.38,2026-10-12,USD,2026-10-26,page_last_update,first
 2026-10-12,2026-10-12,Memory,DDR5 RDIMM 32GB 4800/5600,모듈 현물,TrendForce,spot,2185.0,0.41,2026-10-12,USD,2026-10-26,page_last_update,first
 2026-10-12,2026-10-12,Memory,512Gb TLC,웨이퍼 현물,TrendForce,spot,18.833,0.0,2026-10-12,USD,2026-10-26,page_last_update,first
-2026-10-19,2026-10-19,GPU,B200,GPU 임대가,GetDeploying,market_low,3.75,,2026-10-19,USD/GPU-hr,2026-10-29T05:08:26+09:00,dataset_weekly,N
-2026-10-19,2026-10-19,GPU,B200,GPU 임대가,GetDeploying,market_median,7.5,,2026-10-19,USD/GPU-hr,2026-10-29T05:08:26+09:00,dataset_weekly,Y
-2026-10-19,2026-10-19,GPU,H100,GPU 임대가,GetDeploying,market_low,1.7945,,2026-10-19,USD/GPU-hr,2026-10-29T05:08:26+09:00,dataset_weekly,Y
-2026-10-19,2026-10-19,GPU,H100,GPU 임대가,GetDeploying,market_median,3.99,,2026-10-19,USD/GPU-hr,2026-10-29T05:08:26+09:00,dataset_weekly,Y
-2026-10-19,2026-10-19,GPU,H200,GPU 임대가,GetDeploying,market_low,2.09,,2026-10-19,USD/GPU-hr,2026-10-29T05:08:26+09:00,dataset_weekly,N
-2026-10-19,2026-10-19,GPU,H200,GPU 임대가,GetDeploying,market_median,5.0,,2026-10-19,USD/GPU-hr,2026-10-29T05:08:26+09:00,dataset_weekly,Y
-2026-10-19,2026-10-19,Memory,GDDR5 8Gb,GDDR 현물,TrendForce,spot,12.291,0.0,2026-10-19,USD,2026-10-29T05:08:26+09:00,page_last_update,N
-2026-10-19,2026-10-19,Memory,MLC 64Gb 8GBx8,NAND 현물,TrendForce,spot,42.726,0.92,2026-10-19,USD,2026-10-29T05:08:26+09:00,page_last_update,Y
-2026-10-19,2026-10-19,Memory,SLC 2Gb 256MBx8,NAND 현물,TrendForce,spot,4.383,-0.68,2026-10-19,USD,2026-10-29T05:08:26+09:00,page_last_update,Y
-2026-10-19,2026-10-19,Memory,DDR5 RDIMM 32GB 4800/5600,모듈 현물,TrendForce,spot,2165.0,-0.92,2026-10-19,USD,2026-10-29T05:08:26+09:00,page_last_update,Y
-2026-10-19,2026-10-19,Memory,512Gb TLC,웨이퍼 현물,TrendForce,spot,18.592,-1.28,2026-10-19,USD,2026-10-29T05:08:26+09:00,page_last_update,Y
+2026-10-19,2026-10-19,GPU,B200,GPU 임대가,GetDeploying,market_low,3.75,,2026-10-19,USD/GPU-hr,2026-10-30T05:09:40+09:00,dataset_weekly,N
+2026-10-19,2026-10-19,GPU,B200,GPU 임대가,GetDeploying,market_median,7.5,,2026-10-19,USD/GPU-hr,2026-10-30T05:09:40+09:00,dataset_weekly,Y
+2026-10-19,2026-10-19,GPU,H100,GPU 임대가,GetDeploying,market_low,1.7945,,2026-10-19,USD/GPU-hr,2026-10-30T05:09:40+09:00,dataset_weekly,Y
+2026-10-19,2026-10-19,GPU,H100,GPU 임대가,GetDeploying,market_median,3.99,,2026-10-19,USD/GPU-hr,2026-10-30T05:09:40+09:00,dataset_weekly,Y
+2026-10-19,2026-10-19,GPU,H200,GPU 임대가,GetDeploying,market_low,2.09,,2026-10-19,USD/GPU-hr,2026-10-30T05:09:40+09:00,dataset_weekly,N
+2026-10-19,2026-10-19,GPU,H200,GPU 임대가,GetDeploying,market_median,5.0,,2026-10-19,USD/GPU-hr,2026-10-30T05:09:40+09:00,dataset_weekly,Y
+2026-10-19,2026-10-19,Memory,GDDR5 8Gb,GDDR 현물,TrendForce,spot,12.291,0.0,2026-10-19,USD,2026-10-30T05:09:40+09:00,page_last_update,N
+2026-10-19,2026-10-19,Memory,MLC 64Gb 8GBx8,NAND 현물,TrendForce,spot,42.726,0.92,2026-10-19,USD,2026-10-30T05:09:40+09:00,page_last_update,Y
+2026-10-19,2026-10-19,Memory,SLC 2Gb 256MBx8,NAND 현물,TrendForce,spot,4.383,-0.68,2026-10-19,USD,2026-10-30T05:09:40+09:00,page_last_update,Y
+2026-10-19,2026-10-19,Memory,DDR5 RDIMM 32GB 4800/5600,모듈 현물,TrendForce,spot,2165.0,-0.92,2026-10-19,USD,2026-10-30T05:09:40+09:00,page_last_update,Y
+2026-10-19,2026-10-19,Memory,512Gb TLC,웨이퍼 현물,TrendForce,spot,18.592,-1.28,2026-10-19,USD,2026-10-30T05:09:40+09:00,page_last_update,Y
 2026-10-23,2026-10-19,Memory,DDR4 16Gb (2Gx8) 3200,DRAM 현물,TrendForce,spot,82.87,-0.3,2026-10-23,USD,2026-10-26,page_last_update,first
 2026-10-23,2026-10-19,Memory,DDR5 16Gb (2Gx8) 4800/5600,DRAM 현물,TrendForce,spot,61.267,0.27,2026-10-23,USD,2026-10-26,page_last_update,first
 2026-10-25,2026-10-19,GPU,A100 80GB,GPU 임대가,CoreWeave,list,2.7,,2026-10-25,USD/GPU-hr,2026-10-26,collected_us_et,first
@@ -49,16 +49,16 @@
 2026-10-26,2026-10-26,GPU,A100 80GB,GPU 임대가,CoreWeave,list,2.7,,2026-10-26,USD/GPU-hr,2026-10-27T09:29:13+09:00,collected_us_et,N
 2026-10-26,2026-10-26,GPU,A100 80GB,GPU 임대가,Lambda,list,2.79,,2026-10-26,USD/GPU-hr,2026-10-27T09:29:13+09:00,collected_us_et,N
 2026-10-26,2026-10-26,GPU,B200,GPU 임대가,CoreWeave,list,8.6,,2026-10-26,USD/GPU-hr,2026-10-27T09:29:13+09:00,collected_us_et,N
-2026-10-26,2026-10-26,GPU,B200,GPU 임대가,GetDeploying,market_low,3.75,,2026-10-26,USD/GPU-hr,2026-10-29T05:08:26+09:00,dataset_weekly,N
-2026-10-26,2026-10-26,GPU,B200,GPU 임대가,GetDeploying,market_median,7.5,,2026-10-26,USD/GPU-hr,2026-10-29T05:08:26+09:00,dataset_weekly,Y
+2026-10-26,2026-10-26,GPU,B200,GPU 임대가,GetDeploying,market_low,3.75,,2026-10-26,USD/GPU-hr,2026-10-30T05:09:40+09:00,dataset_weekly,N
+2026-10-26,2026-10-26,GPU,B200,GPU 임대가,GetDeploying,market_median,7.5025,,2026-10-26,USD/GPU-hr,2026-10-30T05:09:40+09:00,dataset_weekly,Y
 2026-10-26,2026-10-26,GPU,B200,GPU 임대가,Lambda,list,6.69,,2026-10-26,USD/GPU-hr,2026-10-27T09:29:13+09:00,collected_us_et,N
 2026-10-26,2026-10-26,GPU,H100,GPU 임대가,CoreWeave,list,6.16,,2026-10-26,USD/GPU-hr,2026-10-27T09:29:13+09:00,collected_us_et,N
-2026-10-26,2026-10-26,GPU,H100,GPU 임대가,GetDeploying,market_low,1.7945,,2026-10-26,USD/GPU-hr,2026-10-29T05:08:26+09:00,dataset_weekly,Y
-2026-10-26,2026-10-26,GPU,H100,GPU 임대가,GetDeploying,market_median,3.99,,2026-10-26,USD/GPU-hr,2026-10-29T05:08:26+09:00,dataset_weekly,Y
+2026-10-26,2026-10-26,GPU,H100,GPU 임대가,GetDeploying,market_low,1.7945,,2026-10-26,USD/GPU-hr,2026-10-30T05:09:40+09:00,dataset_weekly,Y
+2026-10-26,2026-10-26,GPU,H100,GPU 임대가,GetDeploying,market_median,3.99,,2026-10-26,USD/GPU-hr,2026-10-30T05:09:40+09:00,dataset_weekly,Y
 2026-10-26,2026-10-26,GPU,H100,GPU 임대가,Lambda,list,3.99,,2026-10-26,USD/GPU-hr,2026-10-27T09:29:13+09:00,collected_us_et,N
 2026-10-26,2026-10-26,GPU,H200,GPU 임대가,CoreWeave,list,6.31,,2026-10-26,USD/GPU-hr,2026-10-27T09:29:13+09:00,collected_us_et,N
-2026-10-26,2026-10-26,GPU,H200,GPU 임대가,GetDeploying,market_low,2.09,,2026-10-26,USD/GPU-hr,2026-10-29T05:08:26+09:00,dataset_weekly,N
-2026-10-26,2026-10-26,GPU,H200,GPU 임대가,GetDeploying,market_median,4.87,,2026-10-26,USD/GPU-hr,2026-10-29T05:08:26+09:00,dataset_weekly,Y
+2026-10-26,2026-10-26,GPU,H200,GPU 임대가,GetDeploying,market_low,2.09,,2026-10-26,USD/GPU-hr,2026-10-30T05:09:40+09:00,dataset_weekly,N
+2026-10-26,2026-10-26,GPU,H200,GPU 임대가,GetDeploying,market_median,4.84,,2026-10-26,USD/GPU-hr,2026-10-30T05:09:40+09:00,dataset_weekly,Y
 2026-10-26,2026-10-26,Memory,DDR4 16Gb (2Gx8) 3200,DRAM 현물,TrendForce,spot,82.623,-0.3,2026-10-26,USD,2026-10-27T09:29:13+09:00,page_last_update,Y
 2026-10-26,2026-10-26,Memory,DDR5 16Gb (2Gx8) 4800/5600,DRAM 현물,TrendForce,spot,61.333,0.11,2026-10-26,USD,2026-10-27T09:29:13+09:00,page_last_update,Y
 2026-10-27,2026-10-26,GPU,A100 80GB,GPU 임대가,CoreWeave,list,2.7,,2026-10-27,USD/GPU-hr,2026-10-28T04:59:37+09:00,collected_us_et,N
@@ -79,3 +79,12 @@
 2026-10-28,2026-10-26,GPU,H200,GPU 임대가,CoreWeave,list,6.31,,2026-10-28,USD/GPU-hr,2026-10-29T05:08:26+09:00,collected_us_et,N
 2026-10-28,2026-10-26,Memory,DDR4 16Gb (2Gx8) 3200,DRAM 현물,TrendForce,spot,82.92,0.36,2026-10-28,USD,2026-10-29T05:08:26+09:00,page_last_update,Y
 2026-10-28,2026-10-26,Memory,DDR5 16Gb (2Gx8) 4800/5600,DRAM 현물,TrendForce,spot,61.333,0.0,2026-10-28,USD,2026-10-29T05:08:26+09:00,page_last_update,N
+2026-10-29,2026-10-26,GPU,A100 80GB,GPU 임대가,CoreWeave,list,2.7,,2026-10-29,USD/GPU-hr,2026-10-30T05:09:40+09:00,collected_us_et,N
+2026-10-29,2026-10-26,GPU,A100 80GB,GPU 임대가,Lambda,list,2.79,,2026-10-29,USD/GPU-hr,2026-10-30T05:09:40+09:00,collected_us_et,N
+2026-10-29,2026-10-26,GPU,B200,GPU 임대가,CoreWeave,list,8.6,,2026-10-29,USD/GPU-hr,2026-10-30T05:09:40+09:00,collected_us_et,N
+2026-10-29,2026-10-26,GPU,B200,GPU 임대가,Lambda,list,6.69,,2026-10-29,USD/GPU-hr,2026-10-30T05:09:40+09:00,collected_us_et,N
+2026-10-29,2026-10-26,GPU,H100,GPU 임대가,CoreWeave,list,6.16,,2026-10-29,USD/GPU-hr,2026-10-30T05:09:40+09:00,collected_us_et,N
+2026-10-29,2026-10-26,GPU,H100,GPU 임대가,Lambda,list,3.99,,2026-10-29,USD/GPU-hr,2026-10-30T05:09:40+09:00,collected_us_et,N
+2026-10-29,2026-10-26,GPU,H200,GPU 임대가,CoreWeave,list,6.31,,2026-10-29,USD/GPU-hr,2026-10-30T05:09:40+09:00,collected_us_et,N
+2026-10-29,2026-10-26,Memory,DDR4 16Gb (2Gx8) 3200,DRAM 현물,TrendForce,spot,82.92,0.0,2026-10-29,USD,2026-10-30T05:09:40+09:00,page_last_update,N
+2026-10-29,2026-10-26,Memory,DDR5 16Gb (2Gx8) 4800/5600,DRAM 현물,TrendForce,spot,61.333,0.0,2026-10-29,USD,2026-10-30T05:09:40+09:00,page_last_update,N
