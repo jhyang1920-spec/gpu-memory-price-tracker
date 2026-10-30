@@ -16,6 +16,22 @@
 "source_date": "2026-08-31"
 },
 {
+"week": "2026-09-28",
+"item": "DDR5 8GB SO-DIMM",
+"category": "DRAM 고정가",
+"price": 133.0,
+"session_change_pct": 0.0,
+"source_date": "2026-09-30"
+},
+{
+"week": "2026-09-28",
+"item": "DDR4 16GB SO-DIMM",
+"category": "DRAM 고정가",
+"price": 275.0,
+"session_change_pct": 1.85,
+"source_date": "2026-09-30"
+},
+{
 "week": "2026-10-12",
 "item": "DDR5 RDIMM 32GB 4800/5600",
 "category": "모듈 현물",
@@ -115,16 +131,16 @@
 "week": "2026-10-26",
 "item": "DDR5 16Gb (2Gx8) 4800/5600",
 "category": "DRAM 현물",
-"price": 61.333,
-"session_change_pct": 0.0,
-"source_date": "2026-10-29"
+"price": 61.5,
+"session_change_pct": 0.27,
+"source_date": "2026-10-30"
 },
 {
 "week": "2026-10-26",
 "item": "DDR4 16Gb (2Gx8) 3200",
 "category": "DRAM 현물",
-"price": 82.92,
-"session_change_pct": 0.0,
-"source_date": "2026-10-29"
+"price": 82.796,
+"session_change_pct": -0.15,
+"source_date": "2026-10-30"
 }
 ]
