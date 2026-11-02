@@ -142,5 +142,61 @@
 "price": 82.796,
 "session_change_pct": -0.15,
 "source_date": "2026-10-30"
+},
+{
+"week": "2026-10-26",
+"item": "DDR5 RDIMM 32GB 4800/5600",
+"category": "모듈 현물",
+"price": 2165.0,
+"session_change_pct": 0.0,
+"source_date": "2026-10-26"
+},
+{
+"week": "2026-10-26",
+"item": "GDDR5 8Gb",
+"category": "GDDR 현물",
+"price": 12.291,
+"session_change_pct": 0.0,
+"source_date": "2026-10-26"
+},
+{
+"week": "2026-10-26",
+"item": "SLC 2Gb 256MBx8",
+"category": "NAND 현물",
+"price": 4.408,
+"session_change_pct": 0.57,
+"source_date": "2026-10-26"
+},
+{
+"week": "2026-10-26",
+"item": "MLC 64Gb 8GBx8",
+"category": "NAND 현물",
+"price": 43.413,
+"session_change_pct": 1.61,
+"source_date": "2026-10-26"
+},
+{
+"week": "2026-10-26",
+"item": "512Gb TLC",
+"category": "웨이퍼 현물",
+"price": 16.883,
+"session_change_pct": -9.19,
+"source_date": "2026-10-26"
+},
+{
+"week": "2026-11-02",
+"item": "DDR5 16Gb (2Gx8) 4800/5600",
+"category": "DRAM 현물",
+"price": 61.5,
+"session_change_pct": 0.0,
+"source_date": "2026-11-02"
+},
+{
+"week": "2026-11-02",
+"item": "DDR4 16Gb (2Gx8) 3200",
+"category": "DRAM 현물",
+"price": 82.719,
+"session_change_pct": -0.09,
+"source_date": "2026-11-02"
 }
 ]

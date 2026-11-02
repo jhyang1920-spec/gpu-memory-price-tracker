@@ -1,9 +1,11 @@
 {
- "run_at": "2026-11-02T04:58:21+09:00",
+ "run_at": "2026-11-03T05:10:53+09:00",
  "week": "2026-11-02",
- "gpu_rows": 31,
+ "gpu_rows": 30,
  "memory_rows": 9,
- "history_rows_today": 40,
- "missing": [],
+ "history_rows_today": 39,
+ "missing": [
+  "Lambda A100 80GB"
+ ],
  "page_errors": {}
 }
