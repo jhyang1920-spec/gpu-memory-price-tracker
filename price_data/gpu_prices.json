@@ -396,6 +396,24 @@
 "date_basis": "page_updated"
 },
 {
+"week": "2026-10-26",
+"gpu": "A100 80GB",
+"source": "GetDeploying",
+"kind": "market_low",
+"price": 0.89,
+"source_date": "2026-10-26",
+"date_basis": "dataset_weekly"
+},
+{
+"week": "2026-10-26",
+"gpu": "A100 80GB",
+"source": "GetDeploying",
+"kind": "market_median",
+"price": 1.79,
+"source_date": "2026-10-26",
+"date_basis": "dataset_weekly"
+},
+{
 "week": "2026-11-02",
 "gpu": "B200",
 "source": "Lambda",
@@ -538,5 +556,113 @@
 "price": 1.79,
 "source_date": "2026-11-04",
 "date_basis": "page_updated"
+},
+{
+"week": "2026-11-09",
+"gpu": "B200",
+"source": "Lambda",
+"kind": "list",
+"price": 7.79,
+"source_date": "2026-11-09",
+"date_basis": "collected_us_et"
+},
+{
+"week": "2026-11-09",
+"gpu": "H100",
+"source": "Lambda",
+"kind": "list",
+"price": 4.69,
+"source_date": "2026-11-09",
+"date_basis": "collected_us_et"
+},
+{
+"week": "2026-11-09",
+"gpu": "B200",
+"source": "CoreWeave",
+"kind": "list",
+"price": 8.6,
+"source_date": "2026-11-09",
+"date_basis": "collected_us_et"
+},
+{
+"week": "2026-11-09",
+"gpu": "H200",
+"source": "CoreWeave",
+"kind": "list",
+"price": 6.31,
+"source_date": "2026-11-09",
+"date_basis": "collected_us_et"
+},
+{
+"week": "2026-11-09",
+"gpu": "H100",
+"source": "CoreWeave",
+"kind": "list",
+"price": 6.16,
+"source_date": "2026-11-09",
+"date_basis": "collected_us_et"
+},
+{
+"week": "2026-11-09",
+"gpu": "A100 80GB",
+"source": "CoreWeave",
+"kind": "list",
+"price": 2.7,
+"source_date": "2026-11-09",
+"date_basis": "collected_us_et"
+},
+{
+"week": "2026-11-09",
+"gpu": "B200",
+"source": "GetDeploying",
+"kind": "market_low",
+"price": 4.11,
+"source_date": "2026-11-09",
+"date_basis": "dataset_weekly"
+},
+{
+"week": "2026-11-09",
+"gpu": "B200",
+"source": "GetDeploying",
+"kind": "market_median",
+"price": 8.08,
+"source_date": "2026-11-09",
+"date_basis": "dataset_weekly"
+},
+{
+"week": "2026-11-09",
+"gpu": "H100",
+"source": "GetDeploying",
+"kind": "market_low",
+"price": 1.8,
+"source_date": "2026-11-09",
+"date_basis": "dataset_weekly"
+},
+{
+"week": "2026-11-09",
+"gpu": "H100",
+"source": "GetDeploying",
+"kind": "market_median",
+"price": 3.99,
+"source_date": "2026-11-09",
+"date_basis": "dataset_weekly"
+},
+{
+"week": "2026-11-09",
+"gpu": "H200",
+"source": "GetDeploying",
+"kind": "market_low",
+"price": 2.09,
+"source_date": "2026-11-09",
+"date_basis": "dataset_weekly"
+},
+{
+"week": "2026-11-09",
+"gpu": "H200",
+"source": "GetDeploying",
+"kind": "market_median",
+"price": 4.59,
+"source_date": "2026-11-09",
+"date_basis": "dataset_weekly"
 }
 ]
