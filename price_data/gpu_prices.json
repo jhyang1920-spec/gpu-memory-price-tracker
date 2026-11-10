@@ -563,7 +563,7 @@
 "source": "Lambda",
 "kind": "list",
 "price": 7.79,
-"source_date": "2026-11-09",
+"source_date": "2026-11-10",
 "date_basis": "collected_us_et"
 },
 {
@@ -572,7 +572,7 @@
 "source": "Lambda",
 "kind": "list",
 "price": 4.69,
-"source_date": "2026-11-09",
+"source_date": "2026-11-10",
 "date_basis": "collected_us_et"
 },
 {
@@ -581,7 +581,7 @@
 "source": "CoreWeave",
 "kind": "list",
 "price": 8.6,
-"source_date": "2026-11-09",
+"source_date": "2026-11-10",
 "date_basis": "collected_us_et"
 },
 {
@@ -590,7 +590,7 @@
 "source": "CoreWeave",
 "kind": "list",
 "price": 6.31,
-"source_date": "2026-11-09",
+"source_date": "2026-11-10",
 "date_basis": "collected_us_et"
 },
 {
@@ -599,7 +599,7 @@
 "source": "CoreWeave",
 "kind": "list",
 "price": 6.16,
-"source_date": "2026-11-09",
+"source_date": "2026-11-10",
 "date_basis": "collected_us_et"
 },
 {
@@ -608,7 +608,7 @@
 "source": "CoreWeave",
 "kind": "list",
 "price": 2.7,
-"source_date": "2026-11-09",
+"source_date": "2026-11-10",
 "date_basis": "collected_us_et"
 },
 {
@@ -643,7 +643,7 @@
 "gpu": "H100",
 "source": "GetDeploying",
 "kind": "market_median",
-"price": 3.99,
+"price": 4.0911,
 "source_date": "2026-11-09",
 "date_basis": "dataset_weekly"
 },
@@ -661,8 +661,44 @@
 "gpu": "H200",
 "source": "GetDeploying",
 "kind": "market_median",
-"price": 4.59,
+"price": 4.8275,
 "source_date": "2026-11-09",
 "date_basis": "dataset_weekly"
+},
+{
+"week": "2026-11-09",
+"gpu": "B200",
+"source": "RunPod",
+"kind": "list",
+"price": 7.99,
+"source_date": "2026-11-09",
+"date_basis": "page_updated"
+},
+{
+"week": "2026-11-09",
+"gpu": "H200",
+"source": "RunPod",
+"kind": "list",
+"price": 5.29,
+"source_date": "2026-11-09",
+"date_basis": "page_updated"
+},
+{
+"week": "2026-11-09",
+"gpu": "H100",
+"source": "RunPod",
+"kind": "list",
+"price": 3.99,
+"source_date": "2026-11-09",
+"date_basis": "page_updated"
+},
+{
+"week": "2026-11-09",
+"gpu": "A100 80GB",
+"source": "RunPod",
+"kind": "list",
+"price": 1.79,
+"source_date": "2026-11-09",
+"date_basis": "page_updated"
 }
 ]
