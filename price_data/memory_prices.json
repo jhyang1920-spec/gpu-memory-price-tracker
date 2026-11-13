@@ -243,16 +243,16 @@
 "week": "2026-11-09",
 "item": "DDR5 16Gb (2Gx8) 4800/5600",
 "category": "DRAM 현물",
-"price": 60.233,
-"session_change_pct": 0.0,
-"source_date": "2026-11-12"
+"price": 60.267,
+"session_change_pct": 0.06,
+"source_date": "2026-11-13"
 },
 {
 "week": "2026-11-09",
 "item": "DDR4 16Gb (2Gx8) 3200",
 "category": "DRAM 현물",
-"price": 79.75,
-"session_change_pct": -0.15,
-"source_date": "2026-11-12"
+"price": 79.5,
+"session_change_pct": -0.31,
+"source_date": "2026-11-13"
 }
 ]
