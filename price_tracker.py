@@ -193,14 +193,14 @@ LAST_UPDATE = re.compile(r"Last\s*Update\s*[:：]?\s*(\d{4})[-/.](\d{1,2})[-/.](
 PCT = re.compile(r"([▲▼↑↓+\-−—–]?)\s*(-?\d+(?:\.\d+)?)\s*%")
 
 
-def parse_memory(url: str, text: str, week: str, missing: list) -> list:
+def parse_memory(url: str, text: str, week: str, missing: list, targets: list | None = None) -> list:
     """품목명 바로 뒤의 숫자 열을 읽는다.
     price = 첫 % 앞의 마지막 숫자 (현물: Session Average, 고정가: Average)
     change = 첫 % 값 (▲ +, ▼ -)
     source_date = 품목 앞쪽에서 가장 가까운 'Last Update' 날짜
     """
     rows = []
-    for item, cat in MEM_TARGETS[url]:
+    for item, cat in (targets if targets is not None else MEM_TARGETS[url]):
         m = re.search(re.escape(item) + r"(?=\s+[▲▼—\d$])", text)
         if not m:
             missing.append(f"TrendForce {item}")
@@ -462,17 +462,37 @@ def main() -> int:
             (dbg / (re.sub(r"\W+", "_", u)[:80] + ".txt")).write_text(t, encoding="utf-8")
 
     missing: list[str] = []
+    notes: list[str] = []
     gpu_rows, mem_rows = [], []
     for u in GPU_TARGETS:
         if u in texts:
             gpu_rows += parse_gpu(u, texts[u], week, missing, datetime.now(US_ET))
         else:
             missing.append(f"{SOURCE_NAME[u]} 페이지 전체")
+    # TrendForce 가격 페이지는 모두 사이드바의 다른 표(NAND 현물·웨이퍼 현물 등)를 통째로 함께 싣고,
+    # 페이지마다 캐시 시점이 달라 같은 품목의 Last Update가 서로 다를 수 있다(예: flash_spot 11-09, wafer_spot 11-02).
+    # 그래서 품목마다 가져온 모든 페이지에서 찾아 기준일이 가장 늦은 값을 쓴다(같으면 원래 지정한 페이지 우선).
     for u in MEM_TARGETS:
-        if u in texts:
-            mem_rows += parse_memory(u, texts[u], week, missing)
-        else:
+        if u not in texts:
             missing.append(f"TrendForce 페이지 전체 ({u})")
+    for u, targets in MEM_TARGETS.items():
+        for tgt in targets:
+            best, own_miss = None, []
+            for src_url in [u] + [x for x in MEM_TARGETS if x != u]:
+                if src_url not in texts:
+                    continue
+                miss: list = []
+                got = parse_memory(src_url, texts[src_url], week, miss, [tgt])
+                if got and (best is None or got[0]["source_date"] > best[0]["source_date"]):
+                    best = (got[0], src_url)
+                if not got and src_url == u:
+                    own_miss = miss
+            if best:
+                mem_rows.append(best[0])
+                if best[1] != u:
+                    notes.append(f"TrendForce {tgt[0]}: {best[1].rsplit('/', 1)[-1]} 페이지 값이 더 최신({best[0]['source_date']})이라 사용")
+            elif u in texts:
+                missing += own_miss or [f"TrendForce {tgt[0]}"]
 
     try:
         gpu_rows += parse_gd_dataset(fetch_gd_dataset(), missing)
@@ -484,8 +504,13 @@ def main() -> int:
     n_mem = merge(out / "memory_prices.json", mem_rows, ("week", "item"))
     n_csv = append_history(out / "price_history.csv", now.date().isoformat(), now.isoformat(timespec="seconds"),
                            gpu_rows, mem_rows)
+    # 값은 가져왔지만 기준일이 오래된 주간 품목(고정가 제외)은 조용히 넘어가지 않게 stale에 남긴다
+    cutoff = (now.date() - timedelta(days=8)).isoformat()
+    stale = [f"{r['item']} (기준일 {r['source_date']})" for r in mem_rows
+             if "고정가" not in r["category"] and r["source_date"] < cutoff]
     log = {"run_at": now.isoformat(timespec="seconds"), "week": week,
-           "gpu_rows": n_gpu, "memory_rows": n_mem, "history_rows_today": n_csv, "missing": missing, "page_errors": errors}
+           "gpu_rows": n_gpu, "memory_rows": n_mem, "history_rows_today": n_csv, "missing": missing,
+           "stale": stale, "notes": notes, "page_errors": errors}
     (out / "run_log.json").write_text(json.dumps(log, ensure_ascii=False, indent=1), encoding="utf-8")
     print(json.dumps(log, ensure_ascii=False, indent=1))
     # 아무것도 못 가져오면 실패로 표시 (Actions에서 빨간불)
