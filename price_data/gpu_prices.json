@@ -851,7 +851,7 @@
 "source": "Lambda",
 "kind": "list",
 "price": 7.79,
-"source_date": "2026-11-23",
+"source_date": "2026-11-24",
 "date_basis": "collected_us_et"
 },
 {
@@ -860,7 +860,7 @@
 "source": "Lambda",
 "kind": "list",
 "price": 4.69,
-"source_date": "2026-11-23",
+"source_date": "2026-11-24",
 "date_basis": "collected_us_et"
 },
 {
@@ -869,7 +869,7 @@
 "source": "CoreWeave",
 "kind": "list",
 "price": 8.6,
-"source_date": "2026-11-23",
+"source_date": "2026-11-24",
 "date_basis": "collected_us_et"
 },
 {
@@ -878,7 +878,7 @@
 "source": "CoreWeave",
 "kind": "list",
 "price": 6.31,
-"source_date": "2026-11-23",
+"source_date": "2026-11-24",
 "date_basis": "collected_us_et"
 },
 {
@@ -887,7 +887,7 @@
 "source": "CoreWeave",
 "kind": "list",
 "price": 6.16,
-"source_date": "2026-11-23",
+"source_date": "2026-11-24",
 "date_basis": "collected_us_et"
 },
 {
@@ -896,7 +896,7 @@
 "source": "CoreWeave",
 "kind": "list",
 "price": 2.7,
-"source_date": "2026-11-23",
+"source_date": "2026-11-24",
 "date_basis": "collected_us_et"
 },
 {
@@ -904,7 +904,7 @@
 "gpu": "B200",
 "source": "GetDeploying",
 "kind": "market_low",
-"price": 4.11,
+"price": 4.18,
 "source_date": "2026-11-23",
 "date_basis": "dataset_weekly"
 },
@@ -913,7 +913,7 @@
 "gpu": "B200",
 "source": "GetDeploying",
 "kind": "market_median",
-"price": 8.19,
+"price": 8.345,
 "source_date": "2026-11-23",
 "date_basis": "dataset_weekly"
 },
@@ -931,7 +931,7 @@
 "gpu": "H100",
 "source": "GetDeploying",
 "kind": "market_median",
-"price": 4.09,
+"price": 4.24,
 "source_date": "2026-11-23",
 "date_basis": "dataset_weekly"
 },
@@ -940,7 +940,7 @@
 "gpu": "H200",
 "source": "GetDeploying",
 "kind": "market_low",
-"price": 2.09,
+"price": 2.465,
 "source_date": "2026-11-23",
 "date_basis": "dataset_weekly"
 },
@@ -949,7 +949,7 @@
 "gpu": "H200",
 "source": "GetDeploying",
 "kind": "market_median",
-"price": 4.895,
+"price": 4.7825,
 "source_date": "2026-11-23",
 "date_basis": "dataset_weekly"
 }
